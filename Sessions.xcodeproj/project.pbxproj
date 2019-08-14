@@ -1,0 +1,637 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FAAEE31D230474D60022C8BC /* Sessions.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = FAAEE31C230474D60022C8BC /* Sessions.entitlements */; };
+		FAAEE31F230474D60022C8BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAEE31E230474D60022C8BC /* AppDelegate.swift */; };
+		FAAEE322230474D60022C8BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAAEE320230474D60022C8BC /* Main.storyboard */; };
+		FAAEE324230474D60022C8BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAEE323230474D60022C8BC /* ViewController.swift */; };
+		FAAEE326230474D70022C8BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAAEE325230474D70022C8BC /* Assets.xcassets */; };
+		FAAEE331230474D70022C8BC /* SessionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAEE330230474D70022C8BC /* SessionsTests.swift */; };
+		FAAEE338230474D70022C8BC /* Sessions Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FAAEE337230474D70022C8BC /* Sessions Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FAAEE33D230474D70022C8BC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAAEE33C230474D70022C8BC /* Cocoa.framework */; };
+		FAAEE340230474D70022C8BC /* SafariExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAEE33F230474D70022C8BC /* SafariExtensionHandler.swift */; };
+		FAAEE342230474D70022C8BC /* SafariExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAEE341230474D70022C8BC /* SafariExtensionViewController.swift */; };
+		FAAEE345230474D70022C8BC /* SafariExtensionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAAEE343230474D70022C8BC /* SafariExtensionViewController.xib */; };
+		FAAEE348230474D70022C8BC /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = FAAEE347230474D70022C8BC /* script.js */; };
+		FAAEE34A230474D70022C8BC /* ToolbarItemIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FAAEE349230474D70022C8BC /* ToolbarItemIcon.pdf */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FAAEE32D230474D70022C8BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAAEE311230474D60022C8BC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FAAEE318230474D60022C8BC;
+			remoteInfo = Sessions;
+		};
+		FAAEE339230474D70022C8BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAAEE311230474D60022C8BC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FAAEE336230474D70022C8BC;
+			remoteInfo = "Sessions Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FAAEE351230474D70022C8BC /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				FAAEE338230474D70022C8BC /* Sessions Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		FAAEE319230474D60022C8BC /* Sessions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sessions.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAAEE31C230474D60022C8BC /* Sessions.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Sessions.entitlements; sourceTree = "<group>"; };
+		FAAEE31E230474D60022C8BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FAAEE321230474D60022C8BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FAAEE323230474D60022C8BC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FAAEE325230474D70022C8BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FAAEE327230474D70022C8BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAAEE32C230474D70022C8BC /* SessionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SessionsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAAEE330230474D70022C8BC /* SessionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsTests.swift; sourceTree = "<group>"; };
+		FAAEE332230474D70022C8BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAAEE337230474D70022C8BC /* Sessions Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Sessions Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAAEE33C230474D70022C8BC /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		FAAEE33F230474D70022C8BC /* SafariExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionHandler.swift; sourceTree = "<group>"; };
+		FAAEE341230474D70022C8BC /* SafariExtensionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionViewController.swift; sourceTree = "<group>"; };
+		FAAEE344230474D70022C8BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SafariExtensionViewController.xib; sourceTree = "<group>"; };
+		FAAEE346230474D70022C8BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAAEE347230474D70022C8BC /* script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
+		FAAEE349230474D70022C8BC /* ToolbarItemIcon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ToolbarItemIcon.pdf; sourceTree = "<group>"; };
+		FAAEE34B230474D70022C8BC /* Sessions_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Sessions_Extension.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FAAEE316230474D60022C8BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAAEE329230474D70022C8BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAAEE334230474D70022C8BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAAEE33D230474D70022C8BC /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FAAEE310230474D60022C8BC = {
+			isa = PBXGroup;
+			children = (
+				FAAEE31B230474D60022C8BC /* Sessions */,
+				FAAEE32F230474D70022C8BC /* SessionsTests */,
+				FAAEE33E230474D70022C8BC /* Sessions Extension */,
+				FAAEE33B230474D70022C8BC /* Frameworks */,
+				FAAEE31A230474D60022C8BC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FAAEE31A230474D60022C8BC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FAAEE319230474D60022C8BC /* Sessions.app */,
+				FAAEE32C230474D70022C8BC /* SessionsTests.xctest */,
+				FAAEE337230474D70022C8BC /* Sessions Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FAAEE31B230474D60022C8BC /* Sessions */ = {
+			isa = PBXGroup;
+			children = (
+				FAAEE31C230474D60022C8BC /* Sessions.entitlements */,
+				FAAEE31E230474D60022C8BC /* AppDelegate.swift */,
+				FAAEE320230474D60022C8BC /* Main.storyboard */,
+				FAAEE323230474D60022C8BC /* ViewController.swift */,
+				FAAEE325230474D70022C8BC /* Assets.xcassets */,
+				FAAEE327230474D70022C8BC /* Info.plist */,
+			);
+			path = Sessions;
+			sourceTree = "<group>";
+		};
+		FAAEE32F230474D70022C8BC /* SessionsTests */ = {
+			isa = PBXGroup;
+			children = (
+				FAAEE330230474D70022C8BC /* SessionsTests.swift */,
+				FAAEE332230474D70022C8BC /* Info.plist */,
+			);
+			path = SessionsTests;
+			sourceTree = "<group>";
+		};
+		FAAEE33B230474D70022C8BC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FAAEE33C230474D70022C8BC /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FAAEE33E230474D70022C8BC /* Sessions Extension */ = {
+			isa = PBXGroup;
+			children = (
+				FAAEE33F230474D70022C8BC /* SafariExtensionHandler.swift */,
+				FAAEE341230474D70022C8BC /* SafariExtensionViewController.swift */,
+				FAAEE343230474D70022C8BC /* SafariExtensionViewController.xib */,
+				FAAEE346230474D70022C8BC /* Info.plist */,
+				FAAEE347230474D70022C8BC /* script.js */,
+				FAAEE349230474D70022C8BC /* ToolbarItemIcon.pdf */,
+				FAAEE34B230474D70022C8BC /* Sessions_Extension.entitlements */,
+			);
+			path = "Sessions Extension";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FAAEE318230474D60022C8BC /* Sessions */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAAEE352230474D70022C8BC /* Build configuration list for PBXNativeTarget "Sessions" */;
+			buildPhases = (
+				FAAEE315230474D60022C8BC /* Sources */,
+				FAAEE316230474D60022C8BC /* Frameworks */,
+				FAAEE317230474D60022C8BC /* Resources */,
+				FAAEE351230474D70022C8BC /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FAAEE33A230474D70022C8BC /* PBXTargetDependency */,
+			);
+			name = Sessions;
+			productName = Sessions;
+			productReference = FAAEE319230474D60022C8BC /* Sessions.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FAAEE32B230474D70022C8BC /* SessionsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAAEE355230474D70022C8BC /* Build configuration list for PBXNativeTarget "SessionsTests" */;
+			buildPhases = (
+				FAAEE328230474D70022C8BC /* Sources */,
+				FAAEE329230474D70022C8BC /* Frameworks */,
+				FAAEE32A230474D70022C8BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FAAEE32E230474D70022C8BC /* PBXTargetDependency */,
+			);
+			name = SessionsTests;
+			productName = SessionsTests;
+			productReference = FAAEE32C230474D70022C8BC /* SessionsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FAAEE336230474D70022C8BC /* Sessions Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAAEE34E230474D70022C8BC /* Build configuration list for PBXNativeTarget "Sessions Extension" */;
+			buildPhases = (
+				FAAEE333230474D70022C8BC /* Sources */,
+				FAAEE334230474D70022C8BC /* Frameworks */,
+				FAAEE335230474D70022C8BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Sessions Extension";
+			productName = "Sessions Extension";
+			productReference = FAAEE337230474D70022C8BC /* Sessions Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FAAEE311230474D60022C8BC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1030;
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = "Alex Perathoner";
+				TargetAttributes = {
+					FAAEE318230474D60022C8BC = {
+						CreatedOnToolsVersion = 10.3;
+					};
+					FAAEE32B230474D70022C8BC = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = FAAEE318230474D60022C8BC;
+					};
+					FAAEE336230474D70022C8BC = {
+						CreatedOnToolsVersion = 10.3;
+					};
+				};
+			};
+			buildConfigurationList = FAAEE314230474D60022C8BC /* Build configuration list for PBXProject "Sessions" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FAAEE310230474D60022C8BC;
+			productRefGroup = FAAEE31A230474D60022C8BC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FAAEE318230474D60022C8BC /* Sessions */,
+				FAAEE32B230474D70022C8BC /* SessionsTests */,
+				FAAEE336230474D70022C8BC /* Sessions Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FAAEE317230474D60022C8BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAAEE31D230474D60022C8BC /* Sessions.entitlements in Resources */,
+				FAAEE326230474D70022C8BC /* Assets.xcassets in Resources */,
+				FAAEE322230474D60022C8BC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAAEE32A230474D70022C8BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAAEE335230474D70022C8BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAAEE34A230474D70022C8BC /* ToolbarItemIcon.pdf in Resources */,
+				FAAEE345230474D70022C8BC /* SafariExtensionViewController.xib in Resources */,
+				FAAEE348230474D70022C8BC /* script.js in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FAAEE315230474D60022C8BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAAEE324230474D60022C8BC /* ViewController.swift in Sources */,
+				FAAEE31F230474D60022C8BC /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAAEE328230474D70022C8BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAAEE331230474D70022C8BC /* SessionsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAAEE333230474D70022C8BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAAEE342230474D70022C8BC /* SafariExtensionViewController.swift in Sources */,
+				FAAEE340230474D70022C8BC /* SafariExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FAAEE32E230474D70022C8BC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FAAEE318230474D60022C8BC /* Sessions */;
+			targetProxy = FAAEE32D230474D70022C8BC /* PBXContainerItemProxy */;
+		};
+		FAAEE33A230474D70022C8BC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FAAEE336230474D70022C8BC /* Sessions Extension */;
+			targetProxy = FAAEE339230474D70022C8BC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FAAEE320230474D60022C8BC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAAEE321230474D60022C8BC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FAAEE343230474D70022C8BC /* SafariExtensionViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAAEE344230474D70022C8BC /* Base */,
+			);
+			name = SafariExtensionViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FAAEE34C230474D70022C8BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FAAEE34D230474D70022C8BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		FAAEE34F230474D70022C8BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Sessions Extension/Sessions_Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XX9N244QQT;
+				INFOPLIST_FILE = "Sessions Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "AlexP.Sessions-Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		FAAEE350230474D70022C8BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Sessions Extension/Sessions_Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XX9N244QQT;
+				INFOPLIST_FILE = "Sessions Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "AlexP.Sessions-Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		FAAEE353230474D70022C8BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Sessions/Sessions.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = XX9N244QQT;
+				INFOPLIST_FILE = Sessions/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = AlexP.Sessions;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		FAAEE354230474D70022C8BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Sessions/Sessions.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = XX9N244QQT;
+				INFOPLIST_FILE = Sessions/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = AlexP.Sessions;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		FAAEE356230474D70022C8BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = XX9N244QQT;
+				INFOPLIST_FILE = SessionsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = AlexP.SessionsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sessions.app/Contents/MacOS/Sessions";
+			};
+			name = Debug;
+		};
+		FAAEE357230474D70022C8BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = XX9N244QQT;
+				INFOPLIST_FILE = SessionsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = AlexP.SessionsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sessions.app/Contents/MacOS/Sessions";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FAAEE314230474D60022C8BC /* Build configuration list for PBXProject "Sessions" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAAEE34C230474D70022C8BC /* Debug */,
+				FAAEE34D230474D70022C8BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAAEE34E230474D70022C8BC /* Build configuration list for PBXNativeTarget "Sessions Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAAEE34F230474D70022C8BC /* Debug */,
+				FAAEE350230474D70022C8BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAAEE352230474D70022C8BC /* Build configuration list for PBXNativeTarget "Sessions" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAAEE353230474D70022C8BC /* Debug */,
+				FAAEE354230474D70022C8BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAAEE355230474D70022C8BC /* Build configuration list for PBXNativeTarget "SessionsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAAEE356230474D70022C8BC /* Debug */,
+				FAAEE357230474D70022C8BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FAAEE311230474D60022C8BC /* Project object */;
+}
