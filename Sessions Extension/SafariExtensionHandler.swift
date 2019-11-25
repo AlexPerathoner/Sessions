@@ -10,13 +10,6 @@ import SafariServices
 
 class SafariExtensionHandler: SFSafariExtensionHandler {
     
-    override func messageReceived(withName messageName: String, from page: SFSafariPage, userInfo: [String : Any]?) {
-        // This method will be called when a content script provided by your extension calls safari.extension.dispatchMessage("message").
-        page.getPropertiesWithCompletionHandler { properties in
-//            print("hey \(properties?.url) \(properties?.title)")
-        }
-        
-    }
     
     override func toolbarItemClicked(in window: SFSafariWindow) {
         // This method will be called when your toolbar item is clicked.

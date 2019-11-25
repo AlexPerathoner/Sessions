@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA200145238C8D65006B31C0 /* WebPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA200144238C8D65006B31C0 /* WebPage.swift */; };
 		FA6513AF23047CF300DA8665 /* e52-512.png in Resources */ = {isa = PBXBuildFile; fileRef = FA6513AE23047CF300DA8665 /* e52-512.png */; };
 		FAAEE31D230474D60022C8BC /* Sessions.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = FAAEE31C230474D60022C8BC /* Sessions.entitlements */; };
 		FAAEE31F230474D60022C8BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAEE31E230474D60022C8BC /* AppDelegate.swift */; };
@@ -21,7 +22,7 @@
 		FAAEE345230474D70022C8BC /* SafariExtensionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAAEE343230474D70022C8BC /* SafariExtensionViewController.xib */; };
 		FAAEE348230474D70022C8BC /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = FAAEE347230474D70022C8BC /* script.js */; };
 		FABDCBD1230755A2001B240C /* XML.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABDCBD0230755A2001B240C /* XML.swift */; };
-		FABDCBD62309EE88001B240C /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABDCBD52309EE88001B240C /* File.swift */; };
+		FABDCBD62309EE88001B240C /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABDCBD52309EE88001B240C /* Session.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		FA200144238C8D65006B31C0 /* WebPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPage.swift; sourceTree = "<group>"; };
 		FA6513AE23047CF300DA8665 /* e52-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "e52-512.png"; sourceTree = "<group>"; };
 		FA6513B02304C13200DA8665 /* Todo.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Todo.md; sourceTree = "<group>"; };
 		FAAEE319230474D60022C8BC /* Sessions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sessions.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,7 +79,7 @@
 		FAAEE347230474D70022C8BC /* script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
 		FAAEE34B230474D70022C8BC /* Sessions_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Sessions_Extension.entitlements; sourceTree = "<group>"; };
 		FABDCBD0230755A2001B240C /* XML.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XML.swift; sourceTree = "<group>"; };
-		FABDCBD52309EE88001B240C /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		FABDCBD52309EE88001B240C /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,7 +164,8 @@
 			children = (
 				FAAEE33F230474D70022C8BC /* SafariExtensionHandler.swift */,
 				FAAEE341230474D70022C8BC /* SafariExtensionViewController.swift */,
-				FABDCBD52309EE88001B240C /* File.swift */,
+				FABDCBD52309EE88001B240C /* Session.swift */,
+				FA200144238C8D65006B31C0 /* WebPage.swift */,
 				FABDCBD0230755A2001B240C /* XML.swift */,
 				FA6513B02304C13200DA8665 /* Todo.md */,
 				FAAEE343230474D70022C8BC /* SafariExtensionViewController.xib */,
@@ -326,7 +329,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAAEE342230474D70022C8BC /* SafariExtensionViewController.swift in Sources */,
-				FABDCBD62309EE88001B240C /* File.swift in Sources */,
+				FABDCBD62309EE88001B240C /* Session.swift in Sources */,
+				FA200145238C8D65006B31C0 /* WebPage.swift in Sources */,
 				FABDCBD1230755A2001B240C /* XML.swift in Sources */,
 				FAAEE340230474D70022C8BC /* SafariExtensionHandler.swift in Sources */,
 			);
@@ -495,7 +499,8 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "AlexP.Sessions-Extension";
+				MARKETING_VERSION = 1.2;
+				PRODUCT_BUNDLE_IDENTIFIER = "AlexP.Sessions-Extensions";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -515,7 +520,8 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "AlexP.Sessions-Extension";
+				MARKETING_VERSION = 1.2;
+				PRODUCT_BUNDLE_IDENTIFIER = "AlexP.Sessions-Extensions";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;

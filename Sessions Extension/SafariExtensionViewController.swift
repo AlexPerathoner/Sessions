@@ -32,10 +32,10 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSTableVie
 		self.tableView.delegate = self
 		self.tableView.dataSource = self
 		self.searchField.delegate = self
-		if let t = retrieveSession() {
+		if let r: [Session] = retrieveSession() {
 			print("Sessions retrieved")
-			sessions = t
-			filteredSessions = t
+			sessions = r
+			filteredSessions = r
 		}
 		tableView.doubleAction = #selector(tableDoubleClick(_:)) //item of table clicked
     }
@@ -49,7 +49,14 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSTableVie
 		if let unarchivedObject = UserDefaults.standard.object(forKey: "pages") as? NSData {
 			// MARK: TODO - Deprecated, should be updated
 			//return NSKeyedUnarchiver.unarchivedObject(ofClasses: .init(arrayLiteral: Session.self), from: unarchivedObject as Data) as? [Session]
-			return NSKeyedUnarchiver.unarchiveObject(with: unarchivedObject as Data) as? [Session]
+			
+			do {
+				return try (NSKeyedUnarchiver.unarchivedObject(ofClasses: [Session.self, NSArray.self, WebPage.self, NSURL.self], from: unarchivedObject as Data) as? [Session])
+			} catch {
+			   print("Error: \(error)")
+			}
+			
+			//return NSKeyedUnarchiver.unarchiveObject(with: unarchivedObject as Data) as? [Session]
 		}
 		return nil
 	}
@@ -125,7 +132,7 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSTableVie
 		defaults.synchronize()
 	}
 	
-	func idUsed(id: Int) -> Bool {
+	func idUsed(id: String) -> Bool {
 		for i in self.sessions {
 			if i.id == id {
 				return true
@@ -133,14 +140,15 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSTableVie
 		}
 		return false
 	}
-	func generateId() -> Int {
+	func generateId() -> String {
 		var id: Int = 0
 		var alreadyUsedId = true
 		while(alreadyUsedId) {
 			id = Int.random(in: 0..<Int.max) //generates a not already used id
-			alreadyUsedId = idUsed(id: id)
+			alreadyUsedId = idUsed(id: String(id))
 		}
-		return id
+		print("Generated id \(id)")
+		return String(id)
 	}
 	
     @IBAction func addSession(_ sender: Any) {
@@ -157,10 +165,14 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSTableVie
 //				name.removeSubrange(name.firstIndex(of: ".")!..<name.endIndex)
 				
 				let name = actTabs.first!.title
-				//adds to the top of the table
-				self.sessions.insert(Session(name: name, pages: actTabs, id: self.generateId()), at: 0)
+				let id = self.generateId()
+				
+				//adds to the top of the table (note insert at)
+				self.sessions.insert(Session(name: name, pages: actTabs, id: id), at: 0)
+				
 				//adds to the bottom of the table
 				//self.sessions.append(Session(name: name, pages: actTabs))
+				
 				print("Added session")
 			}
 		}
@@ -206,7 +218,7 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSTableVie
 	@IBAction func cellTitleChanged(_ sender: NSTextField) {
 		let newName = sender.stringValue
 		let index = tableView.row(for: sender)
-		sessions[index].changeName(name: newName)
+		sessions[index].name = newName
 		saveSessions(session: sessions)
 		print("Name changed to \(newName)")
 	}
@@ -270,14 +282,14 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSTableVie
 		 //interestingSession.pages.first!.privat
 		
 		
-		SFSafariApplication.openWindow(with: interestingSession.pages.first!.url) { (window) in
+		SFSafariApplication.openWindow(with: (interestingSession.pages.first!.url)) { (window) in
 			for i in 1 ..< interestingSession.pages.count {
 				window?.openTab(with: interestingSession.pages[i].url, makeActiveIfPossible: false, completionHandler: { (tab) in
 				})
 			}
 		}
 		
-		print("Session \"\(interestingSession.name)\" restored - \(interestingSession.pages.count) tabs opened")
+		print("Session \"\(String(describing: interestingSession.name))\" restored - \(interestingSession.pages.count) tabs opened")
 	}
 //
 //	@IBAction func restoreSession(_ sender: Any) {
