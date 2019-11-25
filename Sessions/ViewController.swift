@@ -22,7 +22,6 @@ class ViewController: NSViewController {
         SFSafariApplication.showPreferencesForExtension(withIdentifier: "AlexP.Sessions-Extension") { error in
             if let _ = error {
                 // Insert code to inform the user that something went wrong.
-
             }
         }
     }

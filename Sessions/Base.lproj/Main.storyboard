@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14269.14" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11134"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -65,7 +66,7 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Sessions" customModuleProvider="target"/>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -75,8 +76,8 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController showSeguePresentationStyle="single" id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="App Name" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" titlebarAppearsTransparent="YES" id="IQv-IB-iLA">
-                        <windowStyleMask key="styleMask" closable="YES" miniaturizable="YES"/>
+                    <window key="window" title="Welcome" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" titlebarAppearsTransparent="YES" id="IQv-IB-iLA">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" texturedBackground="YES" fullSizeContentView="YES"/>
                         <windowCollectionBehavior key="collectionBehavior" fullScreenNone="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
@@ -96,57 +97,104 @@
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="Sessions" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="329"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="277"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="42" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZLV-xE-AGT">
-                                <rect key="frame" x="0.0" y="34" width="480" height="250"/>
-                                <subviews>
-                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FWV-e2-WQh" userLabel="IconView">
-                                        <rect key="frame" x="176" y="122" width="128" height="128"/>
-                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" image="AppIcon" id="Hhb-TZ-Dhg"/>
-                                    </imageView>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="EB0-ac-UZR">
-                                        <rect key="frame" x="206" y="63" width="68" height="17"/>
-                                        <textFieldCell key="cell" lineBreakMode="clipping" title="App Name" id="S7v-7o-3vW">
-                                            <font key="font" metaFont="system"/>
-                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                        </textFieldCell>
-                                    </textField>
-                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ooh-eV-eLQ">
-                                        <rect key="frame" x="99" y="-7" width="282" height="32"/>
-                                        <buttonCell key="cell" type="push" title="Open in Safari Extensions Preferences…" alternateTitle="Install" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingMiddle" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Srx-0j-A4D">
-                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" metaFont="system"/>
-                                            <string key="keyEquivalent" base64-UTF8="YES">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="EB0-ac-UZR">
+                                <rect key="frame" x="206" y="222" width="68" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="17" id="fav-T4-saW"/>
+                                    <constraint firstAttribute="width" constant="64" id="rSn-aJ-6sR"/>
+                                </constraints>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="App Name" id="S7v-7o-3vW">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5WT-ar-e7K">
+                                <rect key="frame" x="208" y="200" width="134" height="14"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="6jZ-ld-XyY"/>
+                                    <constraint firstAttribute="height" constant="14" id="diU-OV-arV"/>
+                                </constraints>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="by Alexander Perathoner" id="MBF-CH-RbF">
+                                    <font key="font" metaFont="system" size="11"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="Pv0-sU-HXe">
+                                <rect key="frame" x="208" y="150" width="244" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="Iav-Uu-RDH"/>
+                                    <constraint firstAttribute="height" constant="33" id="bu2-ba-4QM"/>
+                                </constraints>
+                                <textFieldCell key="cell" selectable="YES" title="Inspired by the app &quot;SessionRestore&quot; by SweetP Productions" id="YJT-D6-D9A">
+                                    <font key="font" metaFont="system" size="11"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ddr-ly-wg6">
+                                <rect key="frame" x="29" y="49" width="433" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="62f-Mk-jbc"/>
+                                    <constraint firstAttribute="width" constant="429" id="LeU-lJ-gOZ"/>
+                                </constraints>
+                                <textFieldCell key="cell" title="Lots of tabs open and want to save them? Just click the Save button! Want to reopen them? Just double-click on the session! " id="bkg-Be-gUT">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FWV-e2-WQh" userLabel="IconView">
+                                <rect key="frame" x="29" y="111" width="128" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="EG1-Bq-Tqf"/>
+                                    <constraint firstAttribute="width" constant="128" id="otn-v1-mnO"/>
+                                </constraints>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" image="AppIcon" id="Hhb-TZ-Dhg"/>
+                            </imageView>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ooh-eV-eLQ">
+                                <rect key="frame" x="99" y="13" width="282" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="PL6-FV-JPE"/>
+                                    <constraint firstAttribute="width" constant="270" id="bnE-Ug-aee"/>
+                                </constraints>
+                                <buttonCell key="cell" type="push" title="Open in Safari Extensions Preferences…" alternateTitle="Install" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingMiddle" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Srx-0j-A4D">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <string key="keyEquivalent" base64-UTF8="YES">
 DQ
 </string>
-                                            <connections>
-                                                <action selector="openSafariExtensionPreferences:" target="XfG-lQ-9wD" id="vKk-Xb-MPh"/>
-                                            </connections>
-                                        </buttonCell>
-                                    </button>
-                                </subviews>
-                                <visibilityPriorities>
-                                    <integer value="1000"/>
-                                    <integer value="1000"/>
-                                    <integer value="1000"/>
-                                </visibilityPriorities>
-                                <customSpacing>
-                                    <real value="3.4028234663852886e+38"/>
-                                    <real value="3.4028234663852886e+38"/>
-                                    <real value="3.4028234663852886e+38"/>
-                                </customSpacing>
-                            </stackView>
+                                    <connections>
+                                        <action selector="openSafariExtensionPreferences:" target="XfG-lQ-9wD" id="vKk-Xb-MPh"/>
+                                    </connections>
+                                </buttonCell>
+                            </button>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="ZLV-xE-AGT" secondAttribute="trailing" id="7aD-Ze-9ed"/>
-                            <constraint firstItem="ZLV-xE-AGT" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="45" id="AJ3-sx-ZQx"/>
-                            <constraint firstAttribute="bottom" secondItem="ZLV-xE-AGT" secondAttribute="bottom" constant="34" id="KVY-ss-lTJ"/>
-                            <constraint firstItem="ZLV-xE-AGT" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="mT6-ee-vkp"/>
+                            <constraint firstItem="Pv0-sU-HXe" firstAttribute="top" secondItem="5WT-ar-e7K" secondAttribute="bottom" constant="17" id="0Rw-Yy-Yej"/>
+                            <constraint firstItem="EB0-ac-UZR" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="38" id="1uy-aA-QLh"/>
+                            <constraint firstItem="FWV-e2-WQh" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="29" id="4jJ-xA-eIk"/>
+                            <constraint firstItem="EB0-ac-UZR" firstAttribute="leading" secondItem="FWV-e2-WQh" secondAttribute="trailing" constant="51" id="GRT-02-4Zp"/>
+                            <constraint firstItem="5WT-ar-e7K" firstAttribute="leading" secondItem="FWV-e2-WQh" secondAttribute="trailing" constant="53" id="IPa-2c-fMl"/>
+                            <constraint firstItem="ooh-eV-eLQ" firstAttribute="top" secondItem="ddr-ly-wg6" secondAttribute="bottom" constant="8" id="Kae-eH-Dfe"/>
+                            <constraint firstItem="ooh-eV-eLQ" firstAttribute="top" secondItem="ddr-ly-wg6" secondAttribute="bottom" constant="8" id="LvN-GL-rKk"/>
+                            <constraint firstItem="Pv0-sU-HXe" firstAttribute="leading" secondItem="FWV-e2-WQh" secondAttribute="trailing" constant="53" id="a7m-y7-nVg"/>
+                            <constraint firstItem="Pv0-sU-HXe" firstAttribute="top" secondItem="5WT-ar-e7K" secondAttribute="bottom" constant="17" id="cn8-fk-V5H"/>
+                            <constraint firstItem="ooh-eV-eLQ" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="105" id="dyY-1C-lAq"/>
+                            <constraint firstItem="FWV-e2-WQh" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="38" id="gcB-cN-DiY"/>
+                            <constraint firstAttribute="trailing" secondItem="ooh-eV-eLQ" secondAttribute="trailing" constant="105" id="gvo-zc-eBP"/>
+                            <constraint firstItem="ddr-ly-wg6" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="31" id="nOp-DG-ftu"/>
+                            <constraint firstItem="5WT-ar-e7K" firstAttribute="top" secondItem="EB0-ac-UZR" secondAttribute="bottom" constant="8" id="ro0-cI-vWM"/>
+                            <constraint firstItem="EB0-ac-UZR" firstAttribute="leading" secondItem="FWV-e2-WQh" secondAttribute="trailing" constant="51" id="tdb-7a-fLu"/>
+                            <constraint firstAttribute="trailing" secondItem="ddr-ly-wg6" secondAttribute="trailing" constant="20" id="uIb-2m-vnB"/>
+                            <constraint firstItem="5WT-ar-e7K" firstAttribute="top" secondItem="EB0-ac-UZR" secondAttribute="bottom" constant="8" id="uvV-RS-4Zq"/>
+                            <constraint firstItem="ddr-ly-wg6" firstAttribute="top" secondItem="FWV-e2-WQh" secondAttribute="bottom" constant="9" id="wWW-D9-HVM"/>
                         </constraints>
                     </view>
                     <connections>
@@ -155,7 +203,7 @@ DQ
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="75" y="628.5"/>
         </scene>
     </scenes>
     <resources>

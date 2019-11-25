@@ -38,11 +38,11 @@
 		<key>SFSafariToolbarItem</key>
 		<dict>
 			<key>Action</key>
-			<string>Command</string>
+			<string>Popover</string>
 			<key>Identifier</key>
 			<string>Button</string>
 			<key>Image</key>
-			<string>ToolbarItemIcon.pdf</string>
+			<string>e52-512.png</string>
 			<key>Label</key>
 			<string>Your Button</string>
 		</dict>
@@ -53,12 +53,12 @@
 				<string>*.webkit.org</string>
 			</array>
 			<key>Level</key>
-			<string>Some</string>
+			<string>All</string>
 		</dict>
 	</dict>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2019 Alex Perathoner. All rights reserved.</string>
 	<key>NSHumanReadableDescription</key>
-	<string>This is a Safari Extension. You should tell us what your extension does here.</string>
+	<string>Save your sessions and re-open them whenever you want.</string>
 </dict>
 </plist>

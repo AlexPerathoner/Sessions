@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA6513AF23047CF300DA8665 /* e52-512.png in Resources */ = {isa = PBXBuildFile; fileRef = FA6513AE23047CF300DA8665 /* e52-512.png */; };
 		FAAEE31D230474D60022C8BC /* Sessions.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = FAAEE31C230474D60022C8BC /* Sessions.entitlements */; };
 		FAAEE31F230474D60022C8BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAEE31E230474D60022C8BC /* AppDelegate.swift */; };
 		FAAEE322230474D60022C8BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAAEE320230474D60022C8BC /* Main.storyboard */; };
@@ -19,7 +20,8 @@
 		FAAEE342230474D70022C8BC /* SafariExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAEE341230474D70022C8BC /* SafariExtensionViewController.swift */; };
 		FAAEE345230474D70022C8BC /* SafariExtensionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAAEE343230474D70022C8BC /* SafariExtensionViewController.xib */; };
 		FAAEE348230474D70022C8BC /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = FAAEE347230474D70022C8BC /* script.js */; };
-		FAAEE34A230474D70022C8BC /* ToolbarItemIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FAAEE349230474D70022C8BC /* ToolbarItemIcon.pdf */; };
+		FABDCBD1230755A2001B240C /* XML.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABDCBD0230755A2001B240C /* XML.swift */; };
+		FABDCBD62309EE88001B240C /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABDCBD52309EE88001B240C /* File.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		FA6513AE23047CF300DA8665 /* e52-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "e52-512.png"; sourceTree = "<group>"; };
+		FA6513B02304C13200DA8665 /* Todo.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Todo.md; sourceTree = "<group>"; };
 		FAAEE319230474D60022C8BC /* Sessions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sessions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAAEE31C230474D60022C8BC /* Sessions.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Sessions.entitlements; sourceTree = "<group>"; };
 		FAAEE31E230474D60022C8BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -71,8 +75,9 @@
 		FAAEE344230474D70022C8BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SafariExtensionViewController.xib; sourceTree = "<group>"; };
 		FAAEE346230474D70022C8BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAAEE347230474D70022C8BC /* script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
-		FAAEE349230474D70022C8BC /* ToolbarItemIcon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ToolbarItemIcon.pdf; sourceTree = "<group>"; };
 		FAAEE34B230474D70022C8BC /* Sessions_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Sessions_Extension.entitlements; sourceTree = "<group>"; };
+		FABDCBD0230755A2001B240C /* XML.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XML.swift; sourceTree = "<group>"; };
+		FABDCBD52309EE88001B240C /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,10 +162,13 @@
 			children = (
 				FAAEE33F230474D70022C8BC /* SafariExtensionHandler.swift */,
 				FAAEE341230474D70022C8BC /* SafariExtensionViewController.swift */,
+				FABDCBD52309EE88001B240C /* File.swift */,
+				FABDCBD0230755A2001B240C /* XML.swift */,
+				FA6513B02304C13200DA8665 /* Todo.md */,
 				FAAEE343230474D70022C8BC /* SafariExtensionViewController.xib */,
+				FA6513AE23047CF300DA8665 /* e52-512.png */,
 				FAAEE346230474D70022C8BC /* Info.plist */,
 				FAAEE347230474D70022C8BC /* script.js */,
-				FAAEE349230474D70022C8BC /* ToolbarItemIcon.pdf */,
 				FAAEE34B230474D70022C8BC /* Sessions_Extension.entitlements */,
 			);
 			path = "Sessions Extension";
@@ -287,9 +295,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAAEE34A230474D70022C8BC /* ToolbarItemIcon.pdf in Resources */,
 				FAAEE345230474D70022C8BC /* SafariExtensionViewController.xib in Resources */,
 				FAAEE348230474D70022C8BC /* script.js in Resources */,
+				FA6513AF23047CF300DA8665 /* e52-512.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,6 +326,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAAEE342230474D70022C8BC /* SafariExtensionViewController.swift in Sources */,
+				FABDCBD62309EE88001B240C /* File.swift in Sources */,
+				FABDCBD1230755A2001B240C /* XML.swift in Sources */,
 				FAAEE340230474D70022C8BC /* SafariExtensionHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -476,6 +486,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Sessions Extension/Sessions_Extension.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XX9N244QQT;
 				INFOPLIST_FILE = "Sessions Extension/Info.plist";
@@ -495,6 +506,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Sessions Extension/Sessions_Extension.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XX9N244QQT;
 				INFOPLIST_FILE = "Sessions Extension/Info.plist";
@@ -516,6 +528,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Sessions/Sessions.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = XX9N244QQT;
@@ -524,6 +537,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = AlexP.Sessions;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -536,6 +550,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Sessions/Sessions.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = XX9N244QQT;
@@ -544,6 +559,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = AlexP.Sessions;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -555,6 +571,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = XX9N244QQT;
@@ -566,6 +583,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = AlexP.SessionsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sessions.app/Contents/MacOS/Sessions";
 			};
@@ -576,6 +594,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = XX9N244QQT;
@@ -587,6 +606,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = AlexP.SessionsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sessions.app/Contents/MacOS/Sessions";
 			};
