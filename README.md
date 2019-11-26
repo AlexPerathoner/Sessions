@@ -9,6 +9,4 @@ With Sessions you can easily save them, to re-open them whenever you'll want to!
 - Rename sessions
 - Search
 
-![ScreenShot1](/screenExample.png)
-
 ![Options](https://raw.githubusercontent.com/AlexPerathoner/Sessions/master/Registrazione%20schermo%202019-11-26%20alle%2001.14.21.mov)
