@@ -21,16 +21,16 @@ Safari will warn you that this extension can read sensible information from ever
 As you enable the extension from the Safari's settings window you should see a new icon appear in the bar.
 
 ### Actions
-* **Click** on the **save** button to store the current working session [^1] 
+* **Click** on the **save** button to store the current working session <sup>[1](#note1)</sup> 
 * **Double click** on a previously saved to re-open it
 * **Click** on the **settings icon** next to the name of the session to view some other actions:
 	* **Restore** - Same as double-click action
-	* **Remove** - Deletes the sessions (Caution! <mark>**This action is irreversible!**)==
+	* **Remove** - Deletes the sessions (Caution! <mark>**This action is irreversible!**</mark>)
 	* **Rename** - Same as one-click action. Lets you rename the session (the default name is the title of the first tab open when you clicked on *save*)
 	* **Export** - Creates a .json file in the Downloads folder with every information *Sessions* has stored concerning about that session
 
 
-[^1]: Note that a session only includes the tabs of your current window. <mark>**Other windows won't be included.**</mark>
+<a name="note1"></a><sup>1</sup>: Note that a session only includes the tabs of your current window. <mark>**Other windows won't be included.**</mark>
 
 ## License
 
