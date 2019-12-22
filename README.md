@@ -9,7 +9,7 @@ With *Sessions* you can easily save them, to re-open them whenever you'll want t
 - Rename sessions
 - Search
 
-![Options](https://raw.githubusercontent.com/AlexPerathoner/Sessions/master/Screens/Registrazione%20schermo%202019-11-26%20alle%2001.14.21.mov)
+<img src="https://raw.githubusercontent.com/AlexPerathoner/Sessions/master/Screens/Registrazione%20schermo%202019-11-26%20alle%2001.14.21.mov" width="50%")</img>
 
 ## Installation
 Download and compile. Copy the file Sessions.app into your Application's folder. Open it.
