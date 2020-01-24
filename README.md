@@ -11,7 +11,8 @@ With *Sessions* you can easily save them, to re-open them whenever you'll want t
 - Save and open **private** sessions! <sup>[1](#note1)</sup>
 - Open non-private sessions in private windows!
 
-<br />
+<br/>
+
 ### New in 1.1:
 - Export as json
 - Rename sessions
