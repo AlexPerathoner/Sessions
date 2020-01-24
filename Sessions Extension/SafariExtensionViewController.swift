@@ -41,7 +41,8 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSTableVie
     }
 	
 	@objc func tableDoubleClick(_ sender: Any?) {
-		restoreSession(index: tableView.selectedRow) //gets index of item clicked
+		let index = tableView.selectedRow
+		restoreSession(index: index, asPrivate: isSessionsPrivate(index: index)) //gets index of item clicked
 	}
 	
 	
@@ -185,6 +186,7 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSTableVie
 		}
 		return sessions.count
 	}
+	
 	@IBAction func searching(_ sender: NSSearchField) {
 		if(sender.stringValue != "") {
 			isSearching = true
@@ -201,7 +203,6 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSTableVie
 		tableView.reloadData()
 	}
 	
-	
 	func tableView(_ tableView: NSTableView, objectValueFor tableColumn: NSTableColumn?, row: Int) -> Any?
 	{
 		var item: Session
@@ -212,8 +213,6 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSTableVie
 		}
 		return item.name
 	}
-	
-
 
 	@IBAction func cellTitleChanged(_ sender: NSTextField) {
 		let newName = sender.stringValue
@@ -235,8 +234,24 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSTableVie
 	
 	@IBAction func restoreMenuItem(sender: NSMenuItem) {
 		if(indexClicked == -1) { return }
-		restoreSession(index: indexClicked)
+		restoreSession(index: indexClicked, asPrivate: false)
 		indexClicked = -1
+	}
+	
+	
+	@IBAction func restoreAsPrivate(_ sender: NSMenuItem) {
+		if(indexClicked == -1) { return }
+		if(!readPrivileges(prompt: true)) {return}
+		restoreSession(index: indexClicked, asPrivate: true)
+		indexClicked = -1
+	}
+	
+	
+	private func readPrivileges(prompt: Bool) -> Bool {
+		let options: NSDictionary = [kAXTrustedCheckOptionPrompt.takeRetainedValue() as NSString: prompt]
+		let status = AXIsProcessTrustedWithOptions(options)
+		//print("Reading Accessibility privileges - Current access status " + String(status))
+		return status
 	}
 	
 	@IBAction func removeMenuItem(_ sender: Any) {
@@ -271,25 +286,51 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSTableVie
 		indexClicked = -1
 	}
 	
-	func restoreSession(index: Int) {
+	
+	
+	
+	func isSessionsPrivate(index: Int) -> Bool {
 		var interestingSession: Session
 		if(isSearching) {
 			interestingSession = filteredSessions[index]
 		} else {
 			interestingSession = sessions[index]
 		}
-		//opens new window with first url, removes first item from list and opens other urls in new tabs
-		 //interestingSession.pages.first!.privat
-		
-		
-		SFSafariApplication.openWindow(with: (interestingSession.pages.first!.url)) { (window) in
-			for i in 1 ..< interestingSession.pages.count {
-				window?.openTab(with: interestingSession.pages[i].url, makeActiveIfPossible: false, completionHandler: { (tab) in
-				})
-			}
+		let we: WebPage = interestingSession.pages.first!
+		return we.privat
+	}
+	
+	func restoreSession(index: Int, asPrivate: Bool) {
+		var interestingSession: Session
+		if(isSearching) {
+			interestingSession = filteredSessions[index]
+		} else {
+			interestingSession = sessions[index]
 		}
 		
-		print("Session \"\(String(describing: interestingSession.name))\" restored - \(interestingSession.pages.count) tabs opened")
+		if(asPrivate) {
+			//press cmd + shift + n (new private window)
+			KeyPress.simulateCmdShiftN()
+			SFSafariApplication.getActiveWindow { (window) in
+				//keyevent isn't dispatched synchroniously. A sleep is needed to not open the urls before the window is open
+				usleep(700000) //sleep for 0.7 seconds
+				window?.getAllTabs(completionHandler: { (tabs) in
+					tabs[0].navigate(to: interestingSession.pages.first!.url)
+				})
+				for i in 1 ..< interestingSession.pages.count {
+					window?.openTab(with: interestingSession.pages[i].url, makeActiveIfPossible: false, completionHandler: { _ in})
+				}
+				print("Session \"\(String(describing: interestingSession.name))\" restored - \(interestingSession.pages.count) tabs opened in PRIVATE mode")
+			}
+		} else {
+			SFSafariApplication.openWindow(with: (interestingSession.pages.first!.url)) { (window) in
+				for i in 1 ..< interestingSession.pages.count {
+					window?.openTab(with: interestingSession.pages[i].url, makeActiveIfPossible: false, completionHandler: { (tab) in
+					})
+				}
+			}
+			print("Session \"\(String(describing: interestingSession.name))\" restored - \(interestingSession.pages.count) tabs opened")
+		}
 	}
 //
 //	@IBAction func restoreSession(_ sender: Any) {

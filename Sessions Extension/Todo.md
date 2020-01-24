@@ -18,3 +18,8 @@ DONE
 ### search sessions
 DONE
 #### modify sessions
+
+
+## open in incognito
+
+## right click on save button to get more options

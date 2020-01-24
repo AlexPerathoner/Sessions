@@ -14,7 +14,6 @@
 		FAAEE322230474D60022C8BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAAEE320230474D60022C8BC /* Main.storyboard */; };
 		FAAEE324230474D60022C8BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAEE323230474D60022C8BC /* ViewController.swift */; };
 		FAAEE326230474D70022C8BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAAEE325230474D70022C8BC /* Assets.xcassets */; };
-		FAAEE331230474D70022C8BC /* SessionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAEE330230474D70022C8BC /* SessionsTests.swift */; };
 		FAAEE338230474D70022C8BC /* Sessions Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FAAEE337230474D70022C8BC /* Sessions Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FAAEE33D230474D70022C8BC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAAEE33C230474D70022C8BC /* Cocoa.framework */; };
 		FAAEE340230474D70022C8BC /* SafariExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAEE33F230474D70022C8BC /* SafariExtensionHandler.swift */; };
@@ -23,6 +22,7 @@
 		FAAEE348230474D70022C8BC /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = FAAEE347230474D70022C8BC /* script.js */; };
 		FABDCBD1230755A2001B240C /* XML.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABDCBD0230755A2001B240C /* XML.swift */; };
 		FABDCBD62309EE88001B240C /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABDCBD52309EE88001B240C /* Session.swift */; };
+		FAE2486B23DB6E4300B82591 /* KeyPress.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE2486A23DB6E4300B82591 /* KeyPress.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,8 +68,6 @@
 		FAAEE325230474D70022C8BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAAEE327230474D70022C8BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAAEE32C230474D70022C8BC /* SessionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SessionsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FAAEE330230474D70022C8BC /* SessionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsTests.swift; sourceTree = "<group>"; };
-		FAAEE332230474D70022C8BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAAEE337230474D70022C8BC /* Sessions Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Sessions Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAAEE33C230474D70022C8BC /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		FAAEE33F230474D70022C8BC /* SafariExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionHandler.swift; sourceTree = "<group>"; };
@@ -80,6 +78,7 @@
 		FAAEE34B230474D70022C8BC /* Sessions_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Sessions_Extension.entitlements; sourceTree = "<group>"; };
 		FABDCBD0230755A2001B240C /* XML.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XML.swift; sourceTree = "<group>"; };
 		FABDCBD52309EE88001B240C /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		FAE2486A23DB6E4300B82591 /* KeyPress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyPress.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +111,6 @@
 			isa = PBXGroup;
 			children = (
 				FAAEE31B230474D60022C8BC /* Sessions */,
-				FAAEE32F230474D70022C8BC /* SessionsTests */,
 				FAAEE33E230474D70022C8BC /* Sessions Extension */,
 				FAAEE33B230474D70022C8BC /* Frameworks */,
 				FAAEE31A230474D60022C8BC /* Products */,
@@ -142,15 +140,6 @@
 			path = Sessions;
 			sourceTree = "<group>";
 		};
-		FAAEE32F230474D70022C8BC /* SessionsTests */ = {
-			isa = PBXGroup;
-			children = (
-				FAAEE330230474D70022C8BC /* SessionsTests.swift */,
-				FAAEE332230474D70022C8BC /* Info.plist */,
-			);
-			path = SessionsTests;
-			sourceTree = "<group>";
-		};
 		FAAEE33B230474D70022C8BC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +153,7 @@
 			children = (
 				FAAEE33F230474D70022C8BC /* SafariExtensionHandler.swift */,
 				FAAEE341230474D70022C8BC /* SafariExtensionViewController.swift */,
+				FAE2486A23DB6E4300B82591 /* KeyPress.swift */,
 				FABDCBD52309EE88001B240C /* Session.swift */,
 				FA200144238C8D65006B31C0 /* WebPage.swift */,
 				FABDCBD0230755A2001B240C /* XML.swift */,
@@ -320,7 +310,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAAEE331230474D70022C8BC /* SessionsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,6 +322,7 @@
 				FA200145238C8D65006B31C0 /* WebPage.swift in Sources */,
 				FABDCBD1230755A2001B240C /* XML.swift in Sources */,
 				FAAEE340230474D70022C8BC /* SafariExtensionHandler.swift in Sources */,
+				FAE2486B23DB6E4300B82591 /* KeyPress.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -543,7 +533,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = AlexP.Sessions;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -565,7 +555,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = AlexP.Sessions;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
