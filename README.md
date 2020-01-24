@@ -11,14 +11,15 @@ With *Sessions* you can easily save them, to re-open them whenever you'll want t
 - Save and open **private** sessions! <sup>[1](#note1)</sup>
 - Open non-private sessions in private windows!
 
-<br />
+<br/>
+
 ### New in 1.1:
 - Export as json
 - Rename sessions
 - Search
 
 
-<a name="note2"></a><sup>2</sup>: Note that since there are no public APIs avaible to open a private window I used the stratagem of sending a keystroke event to safari. This means that the function could sometimes fail and restore the session in a different window from the one opened.</mark>
+<a name="note1"></a><sup>1</sup>: Note that since there are no public APIs avaible to open a private window I used the stratagem of sending a keystroke event to safari. This means that the function could sometimes fail and restore the session in a different window from the one opened.</mark>
 
 
 ## Installation
