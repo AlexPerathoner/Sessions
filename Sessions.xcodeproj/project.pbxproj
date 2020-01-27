@@ -26,13 +26,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		FAAEE32D230474D70022C8BC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FAAEE311230474D60022C8BC /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FAAEE318230474D60022C8BC;
-			remoteInfo = Sessions;
-		};
 		FAAEE339230474D70022C8BC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FAAEE311230474D60022C8BC /* Project object */;
@@ -67,7 +60,6 @@
 		FAAEE323230474D60022C8BC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FAAEE325230474D70022C8BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAAEE327230474D70022C8BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FAAEE32C230474D70022C8BC /* SessionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SessionsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAAEE337230474D70022C8BC /* Sessions Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Sessions Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAAEE33C230474D70022C8BC /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		FAAEE33F230474D70022C8BC /* SafariExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionHandler.swift; sourceTree = "<group>"; };
@@ -83,13 +75,6 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		FAAEE316230474D60022C8BC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FAAEE329230474D70022C8BC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -121,7 +106,6 @@
 			isa = PBXGroup;
 			children = (
 				FAAEE319230474D60022C8BC /* Sessions.app */,
-				FAAEE32C230474D70022C8BC /* SessionsTests.xctest */,
 				FAAEE337230474D70022C8BC /* Sessions Extension.appex */,
 			);
 			name = Products;
@@ -189,24 +173,6 @@
 			productReference = FAAEE319230474D60022C8BC /* Sessions.app */;
 			productType = "com.apple.product-type.application";
 		};
-		FAAEE32B230474D70022C8BC /* SessionsTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FAAEE355230474D70022C8BC /* Build configuration list for PBXNativeTarget "SessionsTests" */;
-			buildPhases = (
-				FAAEE328230474D70022C8BC /* Sources */,
-				FAAEE329230474D70022C8BC /* Frameworks */,
-				FAAEE32A230474D70022C8BC /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				FAAEE32E230474D70022C8BC /* PBXTargetDependency */,
-			);
-			name = SessionsTests;
-			productName = SessionsTests;
-			productReference = FAAEE32C230474D70022C8BC /* SessionsTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		FAAEE336230474D70022C8BC /* Sessions Extension */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FAAEE34E230474D70022C8BC /* Build configuration list for PBXNativeTarget "Sessions Extension" */;
@@ -237,10 +203,6 @@
 					FAAEE318230474D60022C8BC = {
 						CreatedOnToolsVersion = 10.3;
 					};
-					FAAEE32B230474D70022C8BC = {
-						CreatedOnToolsVersion = 10.3;
-						TestTargetID = FAAEE318230474D60022C8BC;
-					};
 					FAAEE336230474D70022C8BC = {
 						CreatedOnToolsVersion = 10.3;
 					};
@@ -260,7 +222,6 @@
 			projectRoot = "";
 			targets = (
 				FAAEE318230474D60022C8BC /* Sessions */,
-				FAAEE32B230474D70022C8BC /* SessionsTests */,
 				FAAEE336230474D70022C8BC /* Sessions Extension */,
 			);
 		};
@@ -274,13 +235,6 @@
 				FAAEE31D230474D60022C8BC /* Sessions.entitlements in Resources */,
 				FAAEE326230474D70022C8BC /* Assets.xcassets in Resources */,
 				FAAEE322230474D60022C8BC /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FAAEE32A230474D70022C8BC /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,13 +260,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FAAEE328230474D70022C8BC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		FAAEE333230474D70022C8BC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -329,11 +276,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		FAAEE32E230474D70022C8BC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FAAEE318230474D60022C8BC /* Sessions */;
-			targetProxy = FAAEE32D230474D70022C8BC /* PBXContainerItemProxy */;
-		};
 		FAAEE33A230474D70022C8BC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FAAEE336230474D70022C8BC /* Sessions Extension */;
@@ -562,52 +504,6 @@
 			};
 			name = Release;
 		};
-		FAAEE356230474D70022C8BC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = XX9N244QQT;
-				INFOPLIST_FILE = SessionsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = AlexP.SessionsTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sessions.app/Contents/MacOS/Sessions";
-			};
-			name = Debug;
-		};
-		FAAEE357230474D70022C8BC /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = XX9N244QQT;
-				INFOPLIST_FILE = SessionsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = AlexP.SessionsTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sessions.app/Contents/MacOS/Sessions";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -634,15 +530,6 @@
 			buildConfigurations = (
 				FAAEE353230474D70022C8BC /* Debug */,
 				FAAEE354230474D70022C8BC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FAAEE355230474D70022C8BC /* Build configuration list for PBXNativeTarget "SessionsTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FAAEE356230474D70022C8BC /* Debug */,
-				FAAEE357230474D70022C8BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

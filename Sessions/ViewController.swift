@@ -9,6 +9,7 @@
 import Cocoa
 import SafariServices.SFSafariApplication
 
+
 class ViewController: NSViewController {
 
     @IBOutlet var appNameLabel: NSTextField!
@@ -19,7 +20,7 @@ class ViewController: NSViewController {
     }
     
     @IBAction func openSafariExtensionPreferences(_ sender: AnyObject?) {
-        SFSafariApplication.showPreferencesForExtension(withIdentifier: "AlexP.Sessions-Extension") { error in
+        SFSafariApplication.showPreferencesForExtension(withIdentifier: "AlexP.Sessions-Extensions") { error in
             if let _ = error {
 				NSLog("Couldn't open Safari Preferences. Please enable the extension manually")
             }
