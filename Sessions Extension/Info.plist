@@ -44,7 +44,7 @@
 			<key>Image</key>
 			<string>e52-512.png</string>
 			<key>Label</key>
-			<string>Your Button</string>
+			<string>Sessions</string>
 		</dict>
 		<key>SFSafariWebsiteAccess</key>
 		<dict>
