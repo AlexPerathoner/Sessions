@@ -7,6 +7,9 @@ With *Sessions* you can easily save them, to re-open them whenever you'll want t
 ## Features
 
 <img align="right" margin="10px" src="https://raw.githubusercontent.com/AlexPerathoner/Sessions/master/Screens/PrivateDemonstration.mov" width="40%"></img>
+### New in 1.3:
+- **Pinned** tabs are now no longer part of sessions and will therefore be ignored when restoring a session
+
 ### New in 1.2:
 - Save and open **private** sessions! <sup>[1](#note1)</sup>
 - Open non-private sessions in private windows!
