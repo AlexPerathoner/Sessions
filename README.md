@@ -23,7 +23,7 @@ With *Sessions* you can easily save them, to re-open them whenever you'll want t
 
 
 ## Installation
-Download and compile. Copy the file Sessions.app into your Application's folder. Open it.
+Download the [latest release](https://github.com/AlexPerathoner/Sessions/releases/latest) and copy the file Sessions.app into your Application's folder. Open it.
 
 ![Welcome Window](https://raw.githubusercontent.com/AlexPerathoner/Sessions/master/Screens/welcomeScreen.png)
 
