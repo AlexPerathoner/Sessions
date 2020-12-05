@@ -97,20 +97,32 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSTableVie
         SFSafariApplication.getActiveWindow { (window) in //get safari window
             window?.getAllTabs(completionHandler: { (tabs) in // as the method to get the active windows is on another dispatchqueue we need to invoke it in this way
                 for tab in tabs {
-                    var pageT: WebPage?
-                    self.getPage(tab: tab, completion: { (title, u, privat) in //method to get title, url and private condition for every page in the actual tab
-                        if let url = u {
-                            pageT = WebPage(title: title ?? "", url: url, privat: privat ?? false)
-                            DispatchQueue.main.async {
-                                pages.append(pageT!)
-                                if(tabs.firstIndex(of: tab)! + 1 == tabs.count) { //last tab
-                                    completion(pages)
-									return
-                                }
-                            }
-                        }
-						completion([]) //no pages
-                    })
+					
+					tab.getContainingWindow { (containerWindow) in //checking if tab is pinned: https://stackoverflow.com/questions/63509871/check-if-tab-page-is-pinned-in-safari-app-extension
+						if(containerWindow != nil) {
+							//Tab is not pinned
+							var pageT: WebPage?
+							self.getPage(tab: tab, completion: { (title, u, privat) in //method to get title, url and private condition for every page in the actual tab
+								if let url = u {
+									pageT = WebPage(title: title ?? "", url: url, privat: privat ?? false)
+									DispatchQueue.main.async {
+										pages.append(pageT!)
+										if(tabs.firstIndex(of: tab)! + 1 == tabs.count) { //last tab
+											completion(pages)
+											return
+										}
+									}
+								}
+								completion([]) //no pages
+							})
+						} else {
+							//Tab is pinned!
+							print("Tab was pinned... ignoring")
+						}
+					}
+					
+					
+                    
                 }
             })
         }
@@ -205,13 +217,7 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSTableVie
 	
 	func tableView(_ tableView: NSTableView, objectValueFor tableColumn: NSTableColumn?, row: Int) -> Any?
 	{
-		var item: Session
-		if(isSearching) {
-			item = (filteredSessions)[row]
-		} else {
-			item = (sessions)[row]
-		}
-		return item.name
+		return (isSearching ? filteredSessions : sessions)[row].name
 	}
 
 	@IBAction func cellTitleChanged(_ sender: NSTextField) {
