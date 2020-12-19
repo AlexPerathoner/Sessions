@@ -109,6 +109,7 @@
 		FAAED814258E17F60014F264 /* SafariExtensionViewController */ = {
 			isa = PBXGroup;
 			children = (
+				FAAEE343230474D70022C8BC /* SafariExtensionViewController.xib */,
 				FAAEE341230474D70022C8BC /* SafariExtensionViewController.swift */,
 				FAAED817258E18F20014F264 /* SafariExtensionViewControllerExport.swift */,
 				FAAED815258E18DB0014F264 /* SafariExtensionViewControllerSupport.swift */,
@@ -125,7 +126,6 @@
 				FAAED80D258E11960014F264 /* Constants.swift */,
 				FAE2486A23DB6E4300B82591 /* KeyPress.swift */,
 				FABDCBD0230755A2001B240C /* XML.swift */,
-				FA6513B02304C13200DA8665 /* Todo.md */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -187,10 +187,7 @@
 				FAAED819258E19BC0014F264 /* Support */,
 				FAAEE33F230474D70022C8BC /* SafariExtensionHandler.swift */,
 				FAAED814258E17F60014F264 /* SafariExtensionViewController */,
-				FAAEE343230474D70022C8BC /* SafariExtensionViewController.xib */,
-				FAAEE346230474D70022C8BC /* Info.plist */,
-				FAAEE347230474D70022C8BC /* script.js */,
-				FAAEE34B230474D70022C8BC /* Sessions_Extension.entitlements */,
+				FABF6971258E6882000A1EBB /* Others */,
 			);
 			path = "Sessions Extension";
 			sourceTree = "<group>";
@@ -202,6 +199,17 @@
 				FABF696E258E6520000A1EBB /* Media.xcassets */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		FABF6971258E6882000A1EBB /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				FAAEE346230474D70022C8BC /* Info.plist */,
+				FA6513B02304C13200DA8665 /* Todo.md */,
+				FAAEE347230474D70022C8BC /* script.js */,
+				FAAEE34B230474D70022C8BC /* Sessions_Extension.entitlements */,
+			);
+			path = Others;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -483,19 +491,19 @@
 		FAAEE34F230474D70022C8BC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "Sessions Extension/Sessions_Extension.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Sessions Extension/Others/Sessions_Extension.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XX9N244QQT;
 				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = "Sessions Extension/Info.plist";
+				INFOPLIST_FILE = "Sessions Extension/Others/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = "AlexP.Sessions-Extensions";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -506,19 +514,19 @@
 		FAAEE350230474D70022C8BC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "Sessions Extension/Sessions_Extension.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Sessions Extension/Others/Sessions_Extension.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XX9N244QQT;
 				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = "Sessions Extension/Info.plist";
+				INFOPLIST_FILE = "Sessions Extension/Others/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = "AlexP.Sessions-Extensions";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -542,7 +550,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = AlexP.Sessions;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -565,7 +573,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = AlexP.Sessions;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
