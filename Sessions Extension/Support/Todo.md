@@ -21,5 +21,6 @@ DONE
 
 
 ## open in incognito
+DONE
 
 ## right click on save button to get more options

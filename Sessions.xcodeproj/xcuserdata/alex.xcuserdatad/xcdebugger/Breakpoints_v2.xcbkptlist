@@ -23,22 +23,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "92689849-8179-40EE-A840-8DAFC322C2DE"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Sessions Extension/SafariExtensionViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
-            landmarkName = "retrieveSession()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "C07BD0D1-1B4E-466E-8B42-AFF8B02DE732"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -46,8 +30,8 @@
             filePath = "Sessions Extension/SafariExtensionViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
             landmarkName = "retrieveSession()"
             landmarkType = "7">
          </BreakpointContent>
@@ -62,8 +46,8 @@
             filePath = "Sessions Extension/SafariExtensionViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
             landmarkName = "retrieveSession()"
             landmarkType = "7">
          </BreakpointContent>
@@ -78,8 +62,8 @@
             filePath = "Sessions Extension/SafariExtensionViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "250"
-            endingLineNumber = "250"
+            startingLineNumber = "230"
+            endingLineNumber = "230"
             landmarkName = "restoreAsPrivate(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -94,8 +78,8 @@
             filePath = "Sessions Extension/SafariExtensionViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "306"
-            endingLineNumber = "306"
+            startingLineNumber = "286"
+            endingLineNumber = "286"
             landmarkName = "isSessionsPrivate(index:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -110,8 +94,8 @@
             filePath = "Sessions Extension/SafariExtensionViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "170"
-            endingLineNumber = "170"
+            startingLineNumber = "169"
+            endingLineNumber = "169"
             landmarkName = "addSession(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -126,8 +110,8 @@
             filePath = "Sessions Extension/SafariExtensionViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "168"
-            endingLineNumber = "168"
+            startingLineNumber = "167"
+            endingLineNumber = "167"
             landmarkName = "addSession(_:)"
             landmarkType = "7">
             <Locations>
@@ -174,8 +158,8 @@
             filePath = "Sessions Extension/SafariExtensionViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
+            startingLineNumber = "132"
+            endingLineNumber = "132"
             landmarkName = "getTabs(completion:)"
             landmarkType = "7">
             <Locations>
@@ -208,54 +192,6 @@
                   startingLineNumber = "96"
                   endingLineNumber = "96"
                   offsetFromSymbolStart = "162">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "81257AE9-D49D-4BEC-A331-3F0DF37AD3B5"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Sessions Extension/SafariExtensionViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
-            landmarkName = "getTabs(completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "81257AE9-D49D-4BEC-A331-3F0DF37AD3B5 - 2d5a60ef825395e4"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Array&lt;__C.SFSafariTab&gt;) -&gt; () in closure #1 (Swift.Optional&lt;__C.SFSafariWindow&gt;) -&gt; () in Sessions_Extension.SafariExtensionViewController.getTabs(completion: (Swift.Array&lt;Sessions_Extension.WebPage&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Sessions Extension"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/alex/AppsMine/Sessions/Sessions%20Extension/SafariExtensionViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "102"
-                  endingLineNumber = "102"
-                  offsetFromSymbolStart = "678">
-               </Location>
-               <Location
-                  uuid = "81257AE9-D49D-4BEC-A331-3F0DF37AD3B5 - 9db93ad6f2108858"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;__C.SFSafariWindow&gt;) -&gt; () in closure #1 (Swift.Array&lt;__C.SFSafariTab&gt;) -&gt; () in closure #1 (Swift.Optional&lt;__C.SFSafariWindow&gt;) -&gt; () in Sessions_Extension.SafariExtensionViewController.getTabs(completion: (Swift.Array&lt;Sessions_Extension.WebPage&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Sessions Extension"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/alex/AppsMine/Sessions/Sessions%20Extension/SafariExtensionViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "101"
-                  endingLineNumber = "101"
-                  offsetFromSymbolStart = "81">
                </Location>
             </Locations>
          </BreakpointContent>

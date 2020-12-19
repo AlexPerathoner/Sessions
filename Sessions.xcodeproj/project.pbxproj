@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		FA200145238C8D65006B31C0 /* WebPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA200144238C8D65006B31C0 /* WebPage.swift */; };
 		FA6513AF23047CF300DA8665 /* e52-512.png in Resources */ = {isa = PBXBuildFile; fileRef = FA6513AE23047CF300DA8665 /* e52-512.png */; };
+		FAAED80F258E119E0014F264 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAED80D258E11960014F264 /* Constants.swift */; };
+		FAAED811258E14C00014F264 /* SafariExtensionViewControllerTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAED810258E14C00014F264 /* SafariExtensionViewControllerTable.swift */; };
+		FAAED813258E16330014F264 /* SafariExtensionViewControllerSearchField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAED812258E16330014F264 /* SafariExtensionViewControllerSearchField.swift */; };
+		FAAED816258E18DB0014F264 /* SafariExtensionViewControllerSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAED815258E18DB0014F264 /* SafariExtensionViewControllerSupport.swift */; };
+		FAAED818258E18F20014F264 /* SafariExtensionViewControllerExport.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAED817258E18F20014F264 /* SafariExtensionViewControllerExport.swift */; };
 		FAAEE31D230474D60022C8BC /* Sessions.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = FAAEE31C230474D60022C8BC /* Sessions.entitlements */; };
 		FAAEE31F230474D60022C8BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAEE31E230474D60022C8BC /* AppDelegate.swift */; };
 		FAAEE322230474D60022C8BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAAEE320230474D60022C8BC /* Main.storyboard */; };
@@ -22,6 +27,8 @@
 		FAAEE348230474D70022C8BC /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = FAAEE347230474D70022C8BC /* script.js */; };
 		FABDCBD1230755A2001B240C /* XML.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABDCBD0230755A2001B240C /* XML.swift */; };
 		FABDCBD62309EE88001B240C /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABDCBD52309EE88001B240C /* Session.swift */; };
+		FABF696F258E6520000A1EBB /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FABF696E258E6520000A1EBB /* Media.xcassets */; };
+		FAD60F35258E557200AC2689 /* LoadableNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD60F34258E557200AC2689 /* LoadableNib.swift */; };
 		FAE2486B23DB6E4300B82591 /* KeyPress.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE2486A23DB6E4300B82591 /* KeyPress.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +60,11 @@
 		FA200144238C8D65006B31C0 /* WebPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPage.swift; sourceTree = "<group>"; };
 		FA6513AE23047CF300DA8665 /* e52-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "e52-512.png"; sourceTree = "<group>"; };
 		FA6513B02304C13200DA8665 /* Todo.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Todo.md; sourceTree = "<group>"; };
+		FAAED80D258E11960014F264 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		FAAED810258E14C00014F264 /* SafariExtensionViewControllerTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionViewControllerTable.swift; sourceTree = "<group>"; };
+		FAAED812258E16330014F264 /* SafariExtensionViewControllerSearchField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionViewControllerSearchField.swift; sourceTree = "<group>"; };
+		FAAED815258E18DB0014F264 /* SafariExtensionViewControllerSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionViewControllerSupport.swift; sourceTree = "<group>"; };
+		FAAED817258E18F20014F264 /* SafariExtensionViewControllerExport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionViewControllerExport.swift; sourceTree = "<group>"; };
 		FAAEE319230474D60022C8BC /* Sessions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sessions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAAEE31C230474D60022C8BC /* Sessions.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Sessions.entitlements; sourceTree = "<group>"; };
 		FAAEE31E230474D60022C8BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +82,8 @@
 		FAAEE34B230474D70022C8BC /* Sessions_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Sessions_Extension.entitlements; sourceTree = "<group>"; };
 		FABDCBD0230755A2001B240C /* XML.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XML.swift; sourceTree = "<group>"; };
 		FABDCBD52309EE88001B240C /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		FABF696E258E6520000A1EBB /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		FAD60F34258E557200AC2689 /* LoadableNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoadableNib.swift; path = "Sessions Extension/SafariExtensionViewController/LoadableNib.swift"; sourceTree = SOURCE_ROOT; };
 		FAE2486A23DB6E4300B82591 /* KeyPress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyPress.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -92,6 +106,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FAAED814258E17F60014F264 /* SafariExtensionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FAAEE341230474D70022C8BC /* SafariExtensionViewController.swift */,
+				FAAED817258E18F20014F264 /* SafariExtensionViewControllerExport.swift */,
+				FAAED815258E18DB0014F264 /* SafariExtensionViewControllerSupport.swift */,
+				FAAED812258E16330014F264 /* SafariExtensionViewControllerSearchField.swift */,
+				FAAED810258E14C00014F264 /* SafariExtensionViewControllerTable.swift */,
+			);
+			path = SafariExtensionViewController;
+			sourceTree = "<group>";
+		};
+		FAAED819258E19BC0014F264 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				FAD60F34258E557200AC2689 /* LoadableNib.swift */,
+				FAAED80D258E11960014F264 /* Constants.swift */,
+				FAE2486A23DB6E4300B82591 /* KeyPress.swift */,
+				FABDCBD0230755A2001B240C /* XML.swift */,
+				FA6513B02304C13200DA8665 /* Todo.md */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		FAAED81A258E19D30014F264 /* Structure */ = {
+			isa = PBXGroup;
+			children = (
+				FA200144238C8D65006B31C0 /* WebPage.swift */,
+				FABDCBD52309EE88001B240C /* Session.swift */,
+			);
+			path = Structure;
+			sourceTree = "<group>";
+		};
 		FAAEE310230474D60022C8BC = {
 			isa = PBXGroup;
 			children = (
@@ -135,20 +182,26 @@
 		FAAEE33E230474D70022C8BC /* Sessions Extension */ = {
 			isa = PBXGroup;
 			children = (
+				FABF6959258E6439000A1EBB /* Images */,
+				FAAED81A258E19D30014F264 /* Structure */,
+				FAAED819258E19BC0014F264 /* Support */,
 				FAAEE33F230474D70022C8BC /* SafariExtensionHandler.swift */,
-				FAAEE341230474D70022C8BC /* SafariExtensionViewController.swift */,
-				FAE2486A23DB6E4300B82591 /* KeyPress.swift */,
-				FABDCBD52309EE88001B240C /* Session.swift */,
-				FA200144238C8D65006B31C0 /* WebPage.swift */,
-				FABDCBD0230755A2001B240C /* XML.swift */,
-				FA6513B02304C13200DA8665 /* Todo.md */,
+				FAAED814258E17F60014F264 /* SafariExtensionViewController */,
 				FAAEE343230474D70022C8BC /* SafariExtensionViewController.xib */,
-				FA6513AE23047CF300DA8665 /* e52-512.png */,
 				FAAEE346230474D70022C8BC /* Info.plist */,
 				FAAEE347230474D70022C8BC /* script.js */,
 				FAAEE34B230474D70022C8BC /* Sessions_Extension.entitlements */,
 			);
 			path = "Sessions Extension";
+			sourceTree = "<group>";
+		};
+		FABF6959258E6439000A1EBB /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				FA6513AE23047CF300DA8665 /* e52-512.png */,
+				FABF696E258E6520000A1EBB /* Media.xcassets */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,7 +250,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1030;
-				LastUpgradeCheck = 1030;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Alex Perathoner";
 				TargetAttributes = {
 					FAAEE318230474D60022C8BC = {
@@ -242,6 +295,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FABF696F258E6520000A1EBB /* Media.xcassets in Resources */,
 				FAAEE345230474D70022C8BC /* SafariExtensionViewController.xib in Resources */,
 				FAAEE348230474D70022C8BC /* script.js in Resources */,
 				FA6513AF23047CF300DA8665 /* e52-512.png in Resources */,
@@ -265,11 +319,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAAEE342230474D70022C8BC /* SafariExtensionViewController.swift in Sources */,
+				FAAED818258E18F20014F264 /* SafariExtensionViewControllerExport.swift in Sources */,
 				FABDCBD62309EE88001B240C /* Session.swift in Sources */,
 				FA200145238C8D65006B31C0 /* WebPage.swift in Sources */,
 				FABDCBD1230755A2001B240C /* XML.swift in Sources */,
+				FAAED80F258E119E0014F264 /* Constants.swift in Sources */,
+				FAAED811258E14C00014F264 /* SafariExtensionViewControllerTable.swift in Sources */,
 				FAAEE340230474D70022C8BC /* SafariExtensionHandler.swift in Sources */,
 				FAE2486B23DB6E4300B82591 /* KeyPress.swift in Sources */,
+				FAD60F35258E557200AC2689 /* LoadableNib.swift in Sources */,
+				FAAED816258E18DB0014F264 /* SafariExtensionViewControllerSupport.swift in Sources */,
+				FAAED813258E16330014F264 /* SafariExtensionViewControllerSearchField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,6 +389,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -390,6 +451,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -425,12 +487,14 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XX9N244QQT;
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "Sessions Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "AlexP.Sessions-Extensions";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -446,12 +510,14 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XX9N244QQT;
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "Sessions Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "AlexP.Sessions-Extensions";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -470,6 +536,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = XX9N244QQT;
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = Sessions/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -492,6 +559,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = XX9N244QQT;
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = Sessions/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
