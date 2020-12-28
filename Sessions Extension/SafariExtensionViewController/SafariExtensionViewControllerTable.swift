@@ -25,10 +25,26 @@ extension SafariExtensionViewController: NSTableViewDelegate, NSTableViewDataSou
 		return sessions.count
 	}
 	
-	func tableView(_ tableView: NSTableView, objectValueFor tableColumn: NSTableColumn?, row: Int) -> Any?
-	{
-		return (isSearching ? filteredSessions : sessions)[row].name
+	func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
+		
+		var image: NSImage?
+		var text = ""
+		var view: NSView?
+		if (tableColumn?.identifier.rawValue == "titleColumn") {
+			text = (isSearching ? filteredSessions : sessions)[row].name
+			view = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "titleCell"), owner: nil) as? NSTableCellView
+			(view as? NSTableCellView)?.textField?.stringValue = text
+		} else {
+			if((isSearching ? filteredSessions : sessions)[row].isUpdating ?? false) {
+				image = NSImage(named: "NSStatusAvailable")
+			}
+			view = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "imageCell"), owner: nil) as? NSImageView
+		   (view as? NSImageView)?.image = image ?? nil
+		}
+		
+		return view
 	}
+	
 	
 	
 	@IBAction func tableDoubleClick(_ sender: Any?) {
