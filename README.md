@@ -6,9 +6,18 @@ With *Sessions* you can easily save them, to re-open them whenever you'll want t
 
 ## Features
 
-<img align="right" margin="10px" src="https://raw.githubusercontent.com/AlexPerathoner/Sessions/master/Screens/PrivateDemonstration.mov" width="40%"></img>
+### New in 1.5:
+- You can now replace a saved session with the current workspace
+- Option button is gone - right click on a session to display all the available options
+
+### New in 1.4:
+- You can now choose if you want to ignore or consider pinned tabs when saving your sessions
+- Context menu has a new look
+
 ### New in 1.3:
 - **Pinned** tabs are now no longer part of sessions and will therefore be ignored when restoring a session
+
+<img align="right" margin="10px" src="https://raw.githubusercontent.com/AlexPerathoner/Sessions/master/Screens/PrivateDemonstration.mov" width="40%"></img>
 
 ### New in 1.2:
 - Save and open **private** sessions! <sup>[1](#note1)</sup>
