@@ -111,36 +111,90 @@ extension SafariExtensionViewController {
 			})
 		})
 	}
-	func getTabs(completion: @escaping ([WebPage]) -> ()) {
+	func getTabs(window: SFSafariWindow?, completion: @escaping ([WebPage]) -> ()) {
 		var pages = [WebPage]()
 		let shouldIgnorePinnedTabs = UserDefaults.standard.bool(forKey: Constants.ignoringPinned)
-		SFSafariApplication.getActiveWindow { (window) in //get safari window
-			window?.getAllTabs(completionHandler: { (tabs) in // as the method to get the active windows is on another dispatchqueue we need to invoke it in this way
-				for tab in tabs {
-					tab.getContainingWindow { (containerWindow) in //checking if tab is pinned: https://stackoverflow.com/questions/63509871/check-if-tab-page-is-pinned-in-safari-app-extension
-						if((containerWindow != nil) || shouldIgnorePinnedTabs) {
-							//Tab is not pinned
-							var pageT: WebPage?
-							self.getPage(tab: tab, completion: { (title, u, privat) in //method to get title, url and private condition for every page in the actual tab
-								if let url = u {
-									pageT = WebPage(title: title ?? "", url: url, privat: privat ?? false)
-									DispatchQueue.main.async {
-										pages.append(pageT!)
-										if(tabs.firstIndex(of: tab)! + 1 == tabs.count) { //last tab
-											completion(pages)
-											return
-										}
+		window?.getAllTabs(completionHandler: { (tabs) in // as the method to get the active windows is on another dispatchqueue we need to invoke it in this way
+			guard tabs.count > 0 else {
+				completion([])
+				return
+			}
+			for tab in tabs {
+				tab.getContainingWindow { (containerWindow) in //checking if tab is pinned: https://stackoverflow.com/questions/63509871/check-if-tab-page-is-pinned-in-safari-app-extension
+					if((containerWindow != nil) || shouldIgnorePinnedTabs) {
+						//Tab is not pinned
+						self.getPage(tab: tab, completion: { (title, u, privat) in //method to get title, url and private condition for every page in the actual tab
+							if let url = u {
+								let pageT = WebPage(title: title ?? "", url: url, privat: privat ?? false)
+								DispatchQueue.main.async {
+									pages.append(pageT)
+									if(tabs.firstIndex(of: tab)! + 1 == tabs.count) { //last tab
+										completion(pages)
+										return
 									}
 								}
-								completion([]) //no pages
-							})
-						} else {
-							//Tab is pinned!
-							print("Tab was pinned... ignoring")
-						}
+							}
+						})
+					} else {
+						//Tab is pinned!
+						print("Tab was pinned... ignoring")
 					}
 				}
-			})
+			}
+		})
+		
+	}
+	
+	
+	
+	func restoreSession(index: Int, asPrivate: Bool, completion: ((SFSafariWindow?) -> ())? = nil) {
+		guard index != -1 else {
+			return
 		}
+		var interestingSession: Session
+		if(isSearching) {
+			interestingSession = filteredSessions[index]
+		} else {
+			interestingSession = sessions[index]
+		}
+		
+		if(asPrivate) {
+			//press cmd + shift + n (new private window)
+			KeyPress.simulateCmdShiftN()
+			SFSafariApplication.getActiveWindow { (window) in
+				//keyevent isn't dispatched synchroniously. A sleep is needed to not open the urls before the window is open
+				usleep(700000) //sleep for 0.7 seconds
+				window?.getAllTabs(completionHandler: { (tabs) in
+					tabs[0].navigate(to: interestingSession.pages.first!.url)
+				})
+				for i in 1 ..< interestingSession.pages.count {
+					window?.openTab(with: interestingSession.pages[i].url, makeActiveIfPossible: false, completionHandler: { _ in})
+				}
+				print("Session \"\(String(describing: interestingSession.name))\" restored - \(interestingSession.pages.count) tabs opened in PRIVATE mode")
+				completion?(window)
+			}
+		} else {
+			SFSafariApplication.openWindow(with: (interestingSession.pages.first!.url)) { (window) in
+				for i in 1 ..< interestingSession.pages.count {
+					window?.openTab(with: interestingSession.pages[i].url, makeActiveIfPossible: false, completionHandler: { (tab) in
+					})
+				}
+				print("Session \"\(String(describing: interestingSession.name))\" restored - \(interestingSession.pages.count) tabs opened")
+				completion?(window)
+			}
+		}
+	}
+	
+	func replacePagesInSession(id: String, pages: [WebPage]) {
+		for session in sessions {
+			if(session.id == id) {
+				session.pages = pages
+				return
+			}
+		}
+	}
+	
+	func replacePagesInSession(index: Int, pages: [WebPage]) {
+		self.sessions[index].pages = pages
 	}
 }

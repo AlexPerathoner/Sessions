@@ -12,10 +12,9 @@ extension SafariExtensionViewController: NSTableViewDelegate, NSTableViewDataSou
 	
 	
 	func setupTable() {
-		
-		tableView.doubleAction = #selector(tableDoubleClick(_:)) //item of table clicked
-		self.tableView.delegate = self
-		self.tableView.dataSource = self
+		tableView.delegate = self
+		tableView.dataSource = self
+		tableView.menu?.autoenablesItems = true
 	}
 	
 	
@@ -32,7 +31,7 @@ extension SafariExtensionViewController: NSTableViewDelegate, NSTableViewDataSou
 	}
 	
 	
-	@objc func tableDoubleClick(_ sender: Any?) {
+	@IBAction func tableDoubleClick(_ sender: Any?) {
 		let index = tableView.selectedRow
 		restoreSession(index: index, asPrivate: isSessionsPrivate(index: index)) //gets index of item clicked
 	}

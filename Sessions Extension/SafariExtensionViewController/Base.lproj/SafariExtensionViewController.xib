@@ -9,7 +9,6 @@
         <customObject id="-2" userLabel="File's Owner" customClass="SafariExtensionViewController" customModule="Sessions_Extension" customModuleProvider="target">
             <connections>
                 <outlet property="ignoringPinnedTabsOutlet" destination="476-D1-d1a" id="Iop-bC-XHe"/>
-                <outlet property="meeenu" destination="Wud-45-Yjp" id="r17-I6-Gi5"/>
                 <outlet property="searchField" destination="DvB-ZS-o0O" id="BAo-7i-hZN"/>
                 <outlet property="tableView" destination="tww-Ty-4mM" id="CcK-Cj-jdK"/>
                 <outlet property="view" destination="c22-O7-iKe" id="vwT-Xx-Aiz"/>
@@ -55,7 +54,7 @@
                                 <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                 <tableColumns>
-                                    <tableColumn identifier="nameColumn" width="159" minWidth="40" maxWidth="1000" id="e7Y-MQ-FFZ">
+                                    <tableColumn identifier="nameColumn" width="197" minWidth="40" maxWidth="1000" id="e7Y-MQ-FFZ">
                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
@@ -68,18 +67,18 @@
                                         <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                         <prototypeCellViews>
                                             <tableCellView id="izz-uQ-O3v">
-                                                <rect key="frame" x="1" y="0.0" width="159" height="17"/>
+                                                <rect key="frame" x="1" y="0.0" width="197" height="17"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="eBt-0r-qsH">
-                                                        <rect key="frame" x="1" y="-3" width="159" height="16"/>
+                                                        <rect key="frame" x="1" y="-3" width="197" height="16"/>
                                                         <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" title="Table View Cell" id="adt-3V-SCk">
                                                             <font key="font" metaFont="system"/>
                                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
                                                         <connections>
-                                                            <action selector="cellTitleChanged:" target="nim-kw-0YV" id="tWw-i1-QsW"/>
+                                                            <action selector="cellTitleChanged:" target="-2" id="9uZ-e2-IJc"/>
                                                             <binding destination="izz-uQ-O3v" name="value" keyPath="objectValue" id="ohQ-0V-ZgI"/>
                                                         </connections>
                                                     </textField>
@@ -97,6 +96,7 @@
                                     </tableColumn>
                                 </tableColumns>
                                 <connections>
+                                    <action trigger="doubleAction" selector="tableDoubleClick:" target="-2" id="vXJ-BG-tqz"/>
                                     <outlet property="dataSource" destination="nim-kw-0YV" id="KWE-PI-oek"/>
                                     <outlet property="delegate" destination="nim-kw-0YV" id="IH6-iH-nx4"/>
                                     <outlet property="menu" destination="Wud-45-Yjp" id="hv3-Cj-LIb"/>
@@ -105,7 +105,7 @@
                         </subviews>
                     </clipView>
                     <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="jdH-50-rQ3">
-                        <rect key="frame" x="1" y="196" width="201" height="16"/>
+                        <rect key="frame" x="1" y="170" width="201" height="16"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
                     <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="SVR-HQ-lNz">
@@ -153,10 +153,11 @@
         <userDefaultsController representsSharedInstance="YES" id="KxW-zp-3IW"/>
         <menu autoenablesItems="NO" id="Wud-45-Yjp">
             <items>
-                <menuItem title="Restore" image="icons8-restart" id="1rz-xF-LCp">
+                <menuItem title="Restore" image="icons8-restart" id="swg-WV-vIn">
+                    <attributedString key="attributedTitle"/>
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
-                        <action selector="restoreMenuItemWithSender:" target="-2" id="uge-dh-s2o"/>
+                        <action selector="restoreMenuItemWithSender:" target="-2" id="PEq-T7-FiX"/>
                     </connections>
                 </menuItem>
                 <menuItem title="Private" image="icons8-secure" id="8Vc-2n-Zyp">

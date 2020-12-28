@@ -26,6 +26,7 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSControlT
 	@IBOutlet weak var searchField: NSSearchField!
 	var isSearching = false
 	
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		setupTable()
@@ -51,19 +52,22 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSControlT
 	
     @IBAction func addSession(_ sender: Any) {
 //		encodeToJSONAndSaveTo(file: "sessions.json")
-		self.getTabs { (actTabs) in
-			if actTabs.count > 0 {
-				
-				let name = actTabs.first!.title
-				let id = self.generateId()
-				
-				//adds to the top of the table (note insert at)
-				self.sessions.insert(Session(name: name, pages: actTabs, id: id), at: 0)
-				
-				//adds to the bottom of the table
-				//self.sessions.append(Session(name: name, pages: actTabs))
-				
-				print("Added session")
+		
+		SFSafariApplication.getActiveWindow { (window) in
+			self.getTabs(window: window) { (actTabs) in
+				if actTabs.count > 0 {
+					
+					let name = actTabs.first!.title
+					let id = self.generateId()
+					
+					//adds to the top of the table (note insert at)
+					self.sessions.insert(Session(name: name, pages: actTabs, id: id), at: 0)
+					
+					//adds to the bottom of the table
+					//self.sessions.append(Session(name: name, pages: actTabs))
+					
+					print("Added session")
+				}
 			}
 		}
 	}
@@ -80,110 +84,55 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSControlT
 	}
 	
 	
-	@IBOutlet var meeenu: NSMenu!
-	
-	var indexClicked = 0
-	
-	
-	
 	@IBAction func restoreMenuItem(sender: NSMenuItem) {
-		if(indexClicked == -1) { return }
-		restoreSession(index: indexClicked, asPrivate: false)
-		indexClicked = -1
+		restoreSession(index: tableView.clickedRow, asPrivate: false)
 	}
 	
 	
+	
 	@IBAction func restoreAsPrivate(_ sender: NSMenuItem) {
-		if(indexClicked == -1) { return }
 		if(!readPrivileges(prompt: true)) {return}
-		restoreSession(index: indexClicked, asPrivate: true)
-		indexClicked = -1
+		restoreSession(index: tableView.clickedRow, asPrivate: true)
 	}
 	
 	
 	
 	@IBAction func removeMenuItem(_ sender: Any) {
-		if(indexClicked == -1) { return }
 		if(isSearching) {
-			let deleted = filteredSessions.remove(at: indexClicked).id
+			let deleted = filteredSessions.remove(at: tableView.clickedRow).id
 			for (i,d) in sessions.enumerated() {
 				if d.id == deleted {
 					sessions.remove(at: i)
 				}
 			}
 		} else {
-			sessions.remove(at: indexClicked)
+			sessions.remove(at: tableView.clickedRow)
 		}
-		indexClicked = -1
 	}
 	
 	
 	@IBAction func replaceMenuItem(_ sender: Any) {
-		if(indexClicked == -1) { return }
-		
-		self.getTabs { (actTabs) in
-			if actTabs.count > 0 {
-				let oldSession = self.sessions[self.indexClicked]
-				let newSession = Session(name: oldSession.name, pages: actTabs, id: oldSession.id)
-				self.sessions[self.indexClicked] = newSession
-				self.indexClicked = -1
+		SFSafariApplication.getActiveWindow { (window) in
+			self.getTabs(window: window) { (actTabs) in
+				if actTabs.count > 0 {
+					self.replacePagesInSession(index: self.tableView.clickedRow, pages: actTabs)
+				}
 			}
 		}
 	}
 	
+	
 	@IBAction func renameMenuItem(_ sender: Any) {
-		if(indexClicked == -1) { return }
-		let cellView  = self.tableView.view(atColumn: 0, row: indexClicked, makeIfNecessary: false) as! NSTableCellView
+		let cellView  = self.tableView.view(atColumn: 0, row: tableView.clickedRow, makeIfNecessary: false) as! NSTableCellView
 		cellView.textField?.becomeFirstResponder()
-		indexClicked = -1
 	}
 	
 	@IBAction func exportMenuItem(_ sender: Any) {
-		if(indexClicked == -1) { return }
 		let dateFormatter = DateFormatter()
 		dateFormatter.dateFormat = "dd/MM - h:mm"
 		let name = DateFormatter().string(from: Date())
-		print(encodeToJSONAndSaveTo(data: sessions[indexClicked], file: "Session" + name)!)
-		indexClicked = -1
+		print(encodeToJSONAndSaveTo(data: sessions[tableView.clickedRow], file: "Session" + name)!)
 	}
-	
-	
-	
-	
-	
-	func restoreSession(index: Int, asPrivate: Bool) {
-		var interestingSession: Session
-		if(isSearching) {
-			interestingSession = filteredSessions[index]
-		} else {
-			interestingSession = sessions[index]
-		}
-		
-		if(asPrivate) {
-			//press cmd + shift + n (new private window)
-			KeyPress.simulateCmdShiftN()
-			SFSafariApplication.getActiveWindow { (window) in
-				//keyevent isn't dispatched synchroniously. A sleep is needed to not open the urls before the window is open
-				usleep(700000) //sleep for 0.7 seconds
-				window?.getAllTabs(completionHandler: { (tabs) in
-					tabs[0].navigate(to: interestingSession.pages.first!.url)
-				})
-				for i in 1 ..< interestingSession.pages.count {
-					window?.openTab(with: interestingSession.pages[i].url, makeActiveIfPossible: false, completionHandler: { _ in})
-				}
-				print("Session \"\(String(describing: interestingSession.name))\" restored - \(interestingSession.pages.count) tabs opened in PRIVATE mode")
-			}
-		} else {
-			SFSafariApplication.openWindow(with: (interestingSession.pages.first!.url)) { (window) in
-				for i in 1 ..< interestingSession.pages.count {
-					window?.openTab(with: interestingSession.pages[i].url, makeActiveIfPossible: false, completionHandler: { (tab) in
-					})
-				}
-			}
-			print("Session \"\(String(describing: interestingSession.name))\" restored - \(interestingSession.pages.count) tabs opened")
-		}
-	}
-	
 	
 	
 }
