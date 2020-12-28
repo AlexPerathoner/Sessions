@@ -26,6 +26,9 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSControlT
 	@IBOutlet weak var searchField: NSSearchField!
 	var isSearching = false
 	
+	// MARK: auto update
+	var timer: Timer?
+	
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
