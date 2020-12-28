@@ -167,9 +167,17 @@
                     </connections>
                 </menuItem>
                 <menuItem title="Remove" image="icons8-delete" id="Tsg-EC-kx9">
+                    <attributedString key="attributedTitle"/>
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="removeMenuItem:" target="-2" id="f3k-Wj-JcX"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Replace" image="icons8-synchronize" id="POr-gj-g9C">
+                    <attributedString key="attributedTitle"/>
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="replaceMenuItem:" target="-2" id="tHJ-tI-9SY"/>
                     </connections>
                 </menuItem>
                 <menuItem title="Rename" image="icons8-edit" id="7zR-8H-5la">
@@ -194,5 +202,6 @@
         <image name="icons8-export" width="16" height="16"/>
         <image name="icons8-restart" width="16" height="16"/>
         <image name="icons8-secure" width="16" height="16"/>
+        <image name="icons8-synchronize" width="16" height="16"/>
     </resources>
 </document>

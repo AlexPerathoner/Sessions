@@ -117,6 +117,20 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSControlT
 		indexClicked = -1
 	}
 	
+	
+	@IBAction func replaceMenuItem(_ sender: Any) {
+		if(indexClicked == -1) { return }
+		
+		self.getTabs { (actTabs) in
+			if actTabs.count > 0 {
+				let oldSession = self.sessions[self.indexClicked]
+				let newSession = Session(name: oldSession.name, pages: actTabs, id: oldSession.id)
+				self.sessions[self.indexClicked] = newSession
+				self.indexClicked = -1
+			}
+		}
+	}
+	
 	@IBAction func renameMenuItem(_ sender: Any) {
 		if(indexClicked == -1) { return }
 		let cellView  = self.tableView.view(atColumn: 0, row: indexClicked, makeIfNecessary: false) as! NSTableCellView
