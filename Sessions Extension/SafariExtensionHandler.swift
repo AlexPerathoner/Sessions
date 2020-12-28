@@ -26,24 +26,4 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
 		return SafariExtensionViewController.shared
 	}
 	
-	
-    
-//    override func popoverWillShow(in window: SFSafariWindow) {
-//        window.get
-//        window.getActiveTab { (t) in
-//            t?.getActivePage(completionHandler: { (d) in
-//                d?.getPropertiesWithCompletionHandler({ (g) in
-//                    print(g?.url)
-//                })
-//            })
-//        }
-//        
-//    }
-
-//    func getTabs() -> [SFSafariTab] {
-//
-//
-//
-//    }
-    
 }

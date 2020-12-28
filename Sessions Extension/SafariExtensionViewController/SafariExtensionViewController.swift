@@ -85,10 +85,6 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSControlT
 	var indexClicked = 0
 	
 	
-	@IBAction func options(_ sender: Any) {
-		indexClicked = tableView.row(for: sender as! NSView)
-		meeenu.popUp(positioning: meeenu.item(at: 0), at: NSEvent.mouseLocation, in: nil)
-	}
 	
 	@IBAction func restoreMenuItem(sender: NSMenuItem) {
 		if(indexClicked == -1) { return }
@@ -121,7 +117,6 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSControlT
 		indexClicked = -1
 	}
 	
-		
 	@IBAction func renameMenuItem(_ sender: Any) {
 		if(indexClicked == -1) { return }
 		let cellView  = self.tableView.view(atColumn: 0, row: indexClicked, makeIfNecessary: false) as! NSTableCellView

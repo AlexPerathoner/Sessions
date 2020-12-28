@@ -95,35 +95,11 @@
                                             </tableCellView>
                                         </prototypeCellViews>
                                     </tableColumn>
-                                    <tableColumn identifier="deleteColumn" width="36" minWidth="10" maxWidth="3.4028234663852886e+38" id="cBK-EV-8h9">
-                                        <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
-                                            <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </tableHeaderCell>
-                                        <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" alignment="left" title="Text Cell" id="tN1-YK-P3u">
-                                            <font key="font" metaFont="system"/>
-                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                        </textFieldCell>
-                                        <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
-                                        <prototypeCellViews>
-                                            <button verticalHuggingPriority="750" id="Wgs-JC-wg7">
-                                                <rect key="frame" x="163" y="0.0" width="36" height="25"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="NSSmartBadgeTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="HmN-2D-gqf">
-                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                    <font key="font" metaFont="system"/>
-                                                </buttonCell>
-                                                <connections>
-                                                    <action selector="options:" target="nim-kw-0YV" id="UW6-Bh-HRu"/>
-                                                </connections>
-                                            </button>
-                                        </prototypeCellViews>
-                                    </tableColumn>
                                 </tableColumns>
                                 <connections>
                                     <outlet property="dataSource" destination="nim-kw-0YV" id="KWE-PI-oek"/>
                                     <outlet property="delegate" destination="nim-kw-0YV" id="IH6-iH-nx4"/>
+                                    <outlet property="menu" destination="Wud-45-Yjp" id="hv3-Cj-LIb"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -213,11 +189,10 @@
         </menu>
     </objects>
     <resources>
-        <image name="NSSmartBadgeTemplate" width="14" height="14"/>
         <image name="icons8-delete" width="16" height="16"/>
         <image name="icons8-edit" width="16" height="16"/>
         <image name="icons8-export" width="16" height="16"/>
         <image name="icons8-restart" width="16" height="16"/>
-        <image name="icons8-secure" width="25" height="25"/>
+        <image name="icons8-secure" width="16" height="16"/>
     </resources>
 </document>
