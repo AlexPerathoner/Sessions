@@ -29,6 +29,7 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSControlT
 	// MARK: auto update
 	var timer: Timer?
 	var statusImage: NSImageView?
+	var deleteTimer: Timer?
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()

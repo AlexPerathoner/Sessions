@@ -21,7 +21,7 @@ extension SafariExtensionViewController {
 		
 		restoreSession(index: index, asPrivate: false) { (window) in
 			DispatchQueue.main.sync {
-				self.timer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(self.fireTimer), userInfo: (window, index), repeats: true)
+				self.timer = Timer.scheduledTimer(timeInterval: 10.0, target: self, selector: #selector(self.fireTimer), userInfo: (window, index), repeats: true)
 				self.timer?.tolerance = 2
 				
 				RunLoop.main.add(self.timer!, forMode: .common)
@@ -29,31 +29,35 @@ extension SafariExtensionViewController {
 		}
 	}
 	
+	
 	@objc func fireTimer(timer: Timer) {
 		guard let info = timer.userInfo as? (SFSafariWindow?, Int) else { return }
 		let window = info.0
 		let index = info.1
 		let id = sessions[index].id
 		getTabs(window: window) { (pages) in
-			print("Session \(id) has now \(pages.count) tabs - updating ...")
-			guard pages.count > 0 else {
-				timer.invalidate()
-				
+			print("Session \(id) has now \(pages.count) tabs - will update ...")
+			guard pages.count > 0 else { //window has been closed
+				timer.invalidate() //stopping to auto-update
+				self.deleteTimer?.invalidate() //not updating session if tabs have been removed in the last 10 seconds
 				//has to access through id - index could have changed
-				for session in self.sessions {
-					if session.id == id {
-						session.isUpdating = false
-					}
-				}
+				self.getSession(id: id)?.isUpdating = false
+				
 				DispatchQueue.main.async {
+					//update table
 					self.tableView.reloadData()
 				}
-				
 				
 				print("Window with session \(id) was closed. Stopped updating.")
 				return
 			}
-			self.replacePagesInSession(id: id, pages: pages)
+			
+			//tabs are removed x seconds after
+			self.deleteTimer?.invalidate()
+			self.deleteTimer = Timer.scheduledTimer(withTimeInterval: 30, repeats: false, block: { (deleteTimer) in
+				self.replacePagesInSession(id: id, pages: pages)
+				print("Updaetd session \(id) - \(pages.count) tabs saved")
+			})
 		}
 	}
 }

@@ -185,13 +185,17 @@ extension SafariExtensionViewController {
 		}
 	}
 	
-	func replacePagesInSession(id: String, pages: [WebPage]) {
+	func getSession(id: String) -> Session? {
 		for session in sessions {
 			if(session.id == id) {
-				session.pages = pages
-				return
+				return session
 			}
 		}
+		return nil
+	}
+	
+	func replacePagesInSession(id: String, pages: [WebPage]) {
+		getSession(id: id)?.pages = pages
 	}
 	
 	func replacePagesInSession(index: Int, pages: [WebPage]) {
