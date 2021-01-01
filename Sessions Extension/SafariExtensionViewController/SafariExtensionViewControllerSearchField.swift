@@ -18,7 +18,7 @@ extension SafariExtensionViewController: NSSearchFieldDelegate {
 			isSearching = true
 			filteredSessions.removeAll()
 			for i in sessions {
-				if i.name.lowercased().contains(sender.stringValue.lowercased()) {
+				if shouldShowItem(item: i, str: sender.stringValue.lowercased()) {
 					filteredSessions.append(i)
 				}
 			}
@@ -27,5 +27,15 @@ extension SafariExtensionViewController: NSSearchFieldDelegate {
 			filteredSessions = []
 		}
 		tableView.reloadData()
+	}
+	
+	private func shouldShowItem(item: Session, str: String) -> Bool {
+		let nameContains = item.name.lowercased().contains(str)
+		for page in item.pages {
+			if(page.title.lowercased().contains(str)) {
+				return true
+			}
+		}
+		return nameContains
 	}
 }
