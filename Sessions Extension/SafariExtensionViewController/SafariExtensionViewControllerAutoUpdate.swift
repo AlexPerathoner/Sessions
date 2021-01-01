@@ -14,6 +14,10 @@ extension SafariExtensionViewController {
 	
 	@IBAction func restoreAndAutoUpdateClicked(_ sender: Any) {
 		let index = tableView.clickedRow
+		restoreAndAutoUpdate(sender, index: index)
+	}
+	
+	func restoreAndAutoUpdate(_ sender: Any, index: Int) {
 		//manually setting updated image performs better than reloading the entire table
 		statusImage = tableView.view(atColumn: 1, row: index, makeIfNecessary: false) as? NSImageView
 		statusImage?.image = NSImage(named: "NSStatusAvailable")

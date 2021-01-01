@@ -34,6 +34,9 @@ extension SafariExtensionViewController: NSTableViewDelegate, NSTableViewDataSou
 			text = (isSearching ? filteredSessions : sessions)[row].name
 			view = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "titleCell"), owner: nil) as? NSTableCellView
 			(view as? NSTableCellView)?.textField?.stringValue = text
+			if let textField = (view as? NSTableCellView)?.textField {
+				textField.action = #selector(cellTitleChanged(sender:))
+			}
 		} else {
 			if((isSearching ? filteredSessions : sessions)[row].isUpdating ?? false) {
 				image = NSImage(named: "NSStatusAvailable")
@@ -48,7 +51,6 @@ extension SafariExtensionViewController: NSTableViewDelegate, NSTableViewDataSou
 	
 	
 	@IBAction func tableDoubleClick(_ sender: Any?) {
-		let index = tableView.selectedRow
-		restoreSession(index: index, asPrivate: isSessionsPrivate(index: index)) //gets index of item clicked
+		restoreMenuItem(sender: sender)
 	}
 }

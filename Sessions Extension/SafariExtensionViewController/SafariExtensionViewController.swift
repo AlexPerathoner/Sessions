@@ -35,13 +35,14 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSControlT
 		super.viewDidLoad()
 		setupTable()
 		setupSearchfield()
-		preferredContentSize = NSSize(width: 243, height: 316)
+		preferredContentSize = NSSize(width: 243, height: 344)
 		if let r: [Session] = retrieveSession() {
 			print("Sessions retrieved")
 			sessions = r
 		}
 		ignoringPinnedTabsOutlet.state =
 			UserDefaults.standard.bool(forKey: Constants.ignoringPinned) ? .on : .off
+		alwaysAutoUpdateOutlet.state = UserDefaults.standard.bool(forKey: Constants.alwaysAutoUpdate) ? .on : .off
     }
 	
 	
@@ -50,6 +51,13 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSControlT
 	
 	@IBAction func ignorePinnedTabsBtn(_ sender: NSSwitch) {
 		UserDefaults.standard.setValue(sender.state == .on, forKey: Constants.ignoringPinned)
+	}
+	
+	//MARK: - auto-update switch
+	@IBOutlet weak var alwaysAutoUpdateOutlet: NSSwitch!
+	
+	@IBAction func alwaysAutoUpdateBtn(_ sender: NSSwitch) {
+		UserDefaults.standard.setValue(sender.state == .on, forKey: Constants.alwaysAutoUpdate)
 	}
 	
 	// MARK: - IBActions
@@ -79,7 +87,7 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSControlT
 	
 	
 
-	@IBAction func cellTitleChanged(_ sender: NSTextField) {
+	@objc func cellTitleChanged(sender: NSTextField) {
 		let newName = sender.stringValue
 		let index = tableView.row(for: sender)
 		sessions[index].name = newName
@@ -88,8 +96,13 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSControlT
 	}
 	
 	
-	@IBAction func restoreMenuItem(sender: NSMenuItem) {
-		restoreSession(index: tableView.clickedRow, asPrivate: false)
+	@IBAction func restoreMenuItem(sender: Any) {
+		if(UserDefaults.standard.bool(forKey: Constants.alwaysAutoUpdate)) {
+			restoreAndAutoUpdateClicked(sender)
+		} else {
+			let index = tableView.clickedRow
+			restoreSession(index: index, asPrivate: isSessionsPrivate(index: index))
+		}
 	}
 	
 	
