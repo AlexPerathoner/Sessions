@@ -5,6 +5,11 @@ Have you ever been working on a project, with dozens of tabs open, and wondered 
 With *Sessions* you can easily save them, to re-open them whenever you'll want to!
 
 ## Features
+### New in 1.6:
+- You can now reorder sessions by dragging them in the tabl
+- Settings are moved to the settings button
+- Auto-update: when opening a session in auto-update mode all changes are automatically saved
+- Search bar is now more powerful and scans urls and tabs' titles, too!
 
 ### New in 1.5:
 - You can now replace a saved session with the current workspace
