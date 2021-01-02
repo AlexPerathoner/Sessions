@@ -9,5 +9,6 @@
 import Foundation
 
 class Constants {
-	static var ignoringPinned = "ignoringPinned"
+	static let ignoringPinned = "ignoringPinned"
+	static let alwaysAutoUpdate = "alwaysAutoUpdate"
 }

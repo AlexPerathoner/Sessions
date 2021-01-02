@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FA200145238C8D65006B31C0 /* WebPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA200144238C8D65006B31C0 /* WebPage.swift */; };
+		FA23E1D2259A5610000E54DA /* SafariExtensionViewControllerAutoUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23E1D1259A5610000E54DA /* SafariExtensionViewControllerAutoUpdate.swift */; };
 		FA6513AF23047CF300DA8665 /* e52-512.png in Resources */ = {isa = PBXBuildFile; fileRef = FA6513AE23047CF300DA8665 /* e52-512.png */; };
 		FAAED80F258E119E0014F264 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAED80D258E11960014F264 /* Constants.swift */; };
 		FAAED811258E14C00014F264 /* SafariExtensionViewControllerTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAED810258E14C00014F264 /* SafariExtensionViewControllerTable.swift */; };
@@ -58,6 +59,7 @@
 
 /* Begin PBXFileReference section */
 		FA200144238C8D65006B31C0 /* WebPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPage.swift; sourceTree = "<group>"; };
+		FA23E1D1259A5610000E54DA /* SafariExtensionViewControllerAutoUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionViewControllerAutoUpdate.swift; sourceTree = "<group>"; };
 		FA6513AE23047CF300DA8665 /* e52-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "e52-512.png"; sourceTree = "<group>"; };
 		FA6513B02304C13200DA8665 /* Todo.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Todo.md; sourceTree = "<group>"; };
 		FAAED80D258E11960014F264 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 			children = (
 				FAAEE343230474D70022C8BC /* SafariExtensionViewController.xib */,
 				FAAEE341230474D70022C8BC /* SafariExtensionViewController.swift */,
+				FA23E1D1259A5610000E54DA /* SafariExtensionViewControllerAutoUpdate.swift */,
 				FAAED817258E18F20014F264 /* SafariExtensionViewControllerExport.swift */,
 				FAAED815258E18DB0014F264 /* SafariExtensionViewControllerSupport.swift */,
 				FAAED812258E16330014F264 /* SafariExtensionViewControllerSearchField.swift */,
@@ -327,6 +330,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAAEE342230474D70022C8BC /* SafariExtensionViewController.swift in Sources */,
+				FA23E1D2259A5610000E54DA /* SafariExtensionViewControllerAutoUpdate.swift in Sources */,
 				FAAED818258E18F20014F264 /* SafariExtensionViewControllerExport.swift in Sources */,
 				FABDCBD62309EE88001B240C /* Session.swift in Sources */,
 				FA200145238C8D65006B31C0 /* WebPage.swift in Sources */,
@@ -503,7 +507,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				MARKETING_VERSION = 1.5;
+				MARKETING_VERSION = 1.6;
 				PRODUCT_BUNDLE_IDENTIFIER = "AlexP.Sessions-Extensions";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -526,7 +530,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				MARKETING_VERSION = 1.5;
+				MARKETING_VERSION = 1.6;
 				PRODUCT_BUNDLE_IDENTIFIER = "AlexP.Sessions-Extensions";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -550,7 +554,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.5;
+				MARKETING_VERSION = 1.6;
 				PRODUCT_BUNDLE_IDENTIFIER = AlexP.Sessions;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -573,7 +577,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.5;
+				MARKETING_VERSION = 1.6;
 				PRODUCT_BUNDLE_IDENTIFIER = AlexP.Sessions;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
