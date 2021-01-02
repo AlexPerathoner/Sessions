@@ -31,11 +31,15 @@ extension SafariExtensionViewController: NSSearchFieldDelegate {
 	
 	private func shouldShowItem(item: Session, str: String) -> Bool {
 		let nameContains = item.name.lowercased().contains(str)
+		if nameContains { return true }
 		for page in item.pages {
 			if(page.title.lowercased().contains(str)) {
 				return true
 			}
+			if(page.url.absoluteString.lowercased().contains(str)) {
+				return true
+			}
 		}
-		return nameContains
+		return false
 	}
 }
