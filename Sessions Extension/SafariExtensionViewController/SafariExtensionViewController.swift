@@ -37,7 +37,7 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSControlT
 		super.viewDidLoad()
 		setupTable()
 		setupSearchfield()
-		preferredContentSize = NSSize(width: 243, height: 344)
+		preferredContentSize = NSSize(width: 243, height: 321)
 		if let r: [Session] = retrieveSession() {
 			print("Sessions retrieved")
 			sessions = r
