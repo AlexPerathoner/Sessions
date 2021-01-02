@@ -45,18 +45,25 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSControlT
 		alwaysAutoUpdateOutlet.state = UserDefaults.standard.bool(forKey: Constants.alwaysAutoUpdate) ? .on : .off
     }
 	
+	//MARK: - Settings
+	
+	@IBOutlet var settingsMenu: NSMenu!
+	
+	@IBAction func showSettings(_ sender: Any) {
+		settingsMenu.popUp(positioning: nil, at: NSEvent.mouseLocation, in: nil)
+	}
 	
 	//MARK: - pinned tabs switch
-	@IBOutlet weak var ignoringPinnedTabsOutlet: NSSwitch!
-	
-	@IBAction func ignorePinnedTabsBtn(_ sender: NSSwitch) {
+	@IBOutlet weak var ignoringPinnedTabsOutlet: NSMenuItem!
+	@IBAction func ignorePinnedTabsBtn(_ sender: NSMenuItem) {
+		sender.state = sender.state == .on ? .off : .on
 		UserDefaults.standard.setValue(sender.state == .on, forKey: Constants.ignoringPinned)
 	}
 	
 	//MARK: - auto-update switch
-	@IBOutlet weak var alwaysAutoUpdateOutlet: NSSwitch!
-	
-	@IBAction func alwaysAutoUpdateBtn(_ sender: NSSwitch) {
+	@IBOutlet weak var alwaysAutoUpdateOutlet: NSMenuItem!
+	@IBAction func alwaysAutoUpdateBtn(_ sender: NSMenuItem) {
+		sender.state = sender.state == .on ? .off : .on
 		UserDefaults.standard.setValue(sender.state == .on, forKey: Constants.alwaysAutoUpdate)
 	}
 	
