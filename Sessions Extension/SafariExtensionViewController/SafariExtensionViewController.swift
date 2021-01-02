@@ -22,6 +22,8 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSControlT
 	var filteredSessions = [Session]()
 	// MARK: table
 	@IBOutlet weak var tableView: NSTableView!
+	let dragDropType = NSPasteboard.PasteboardType.string
+	
 	// MARK: searchfield
 	@IBOutlet weak var searchField: NSSearchField!
 	var isSearching = false
