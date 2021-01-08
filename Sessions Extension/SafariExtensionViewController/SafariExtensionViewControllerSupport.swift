@@ -195,7 +195,9 @@ extension SafariExtensionViewController {
 	}
 	
 	func replacePagesInSession(id: String, pages: [WebPage]) {
-		getSession(id: id)?.pages = pages
+		if let session = getSession(id: id) {
+			session.pages = pages
+		}
 	}
 	
 	func replacePagesInSession(index: Int, pages: [WebPage]) {

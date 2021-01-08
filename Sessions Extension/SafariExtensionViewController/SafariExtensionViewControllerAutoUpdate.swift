@@ -57,10 +57,9 @@ extension SafariExtensionViewController {
 			}
 			
 			//tabs are removed x seconds after
-			self.deleteTimer?.invalidate()
 			self.deleteTimer = Timer.scheduledTimer(withTimeInterval: 30, repeats: false, block: { (deleteTimer) in
 				self.replacePagesInSession(id: id, pages: pages)
-				print("Updaetd session \(id) - \(pages.count) tabs saved")
+				print("Updated session \(id) - \(pages.count) tabs saved")
 			})
 		}
 	}

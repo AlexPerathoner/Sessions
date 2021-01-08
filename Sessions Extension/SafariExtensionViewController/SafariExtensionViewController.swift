@@ -72,8 +72,6 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSControlT
 	// MARK: - IBActions
 	
     @IBAction func addSession(_ sender: Any) {
-//		encodeToJSONAndSaveTo(file: "sessions.json")
-		
 		SFSafariApplication.getActiveWindow { (window) in
 			self.getTabs(window: window) { (actTabs) in
 				if actTabs.count > 0 {
@@ -138,10 +136,14 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSControlT
 	
 	
 	@IBAction func replaceMenuItem(_ sender: Any) {
+		let clickedRow = self.tableView.clickedRow
 		SFSafariApplication.getActiveWindow { (window) in
 			self.getTabs(window: window) { (actTabs) in
 				if actTabs.count > 0 {
-					self.replacePagesInSession(index: self.tableView.clickedRow, pages: actTabs)
+					NSLog("Replacing session \(clickedRow) with a session of \(actTabs.count) tabs")
+					self.replacePagesInSession(index: clickedRow, pages: actTabs)
+				} else {
+					NSLog("ERROR: No tabs found while trying to replace")
 				}
 			}
 		}
