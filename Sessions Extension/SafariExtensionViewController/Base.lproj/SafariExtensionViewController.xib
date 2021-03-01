@@ -12,6 +12,7 @@
                 <outlet property="ignoringPinnedTabsOutlet" destination="ixg-Wq-9Mi" id="Fel-pF-UPX"/>
                 <outlet property="searchField" destination="DvB-ZS-o0O" id="BAo-7i-hZN"/>
                 <outlet property="settingsMenu" destination="jCy-Qq-tCj" id="IwS-x7-duU"/>
+                <outlet property="singleSelectionMenu" destination="Wud-45-Yjp" id="5iA-sz-goo"/>
                 <outlet property="tableView" destination="tww-Ty-4mM" id="CcK-Cj-jdK"/>
                 <outlet property="view" destination="c22-O7-iKe" id="vwT-Xx-Aiz"/>
             </connections>
@@ -38,7 +39,7 @@
                         <rect key="frame" x="1" y="1" width="201" height="185"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" alternatingRowBackgroundColors="YES" columnReordering="NO" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" rowHeight="22" rowSizeStyle="automatic" viewBased="YES" id="tww-Ty-4mM">
+                            <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" alternatingRowBackgroundColors="YES" columnReordering="NO" columnResizing="NO" autosaveColumns="NO" rowHeight="22" rowSizeStyle="automatic" viewBased="YES" id="tww-Ty-4mM" customClass="TableView" customModule="Sessions_Extension" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="201" height="185"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <size key="intercellSpacing" width="3" height="0.0"/>
@@ -97,7 +98,6 @@
                                     <action trigger="doubleAction" selector="tableDoubleClick:" target="-2" id="vXJ-BG-tqz"/>
                                     <outlet property="dataSource" destination="nim-kw-0YV" id="KWE-PI-oek"/>
                                     <outlet property="delegate" destination="nim-kw-0YV" id="IH6-iH-nx4"/>
-                                    <outlet property="menu" destination="Wud-45-Yjp" id="hv3-Cj-LIb"/>
                                 </connections>
                             </tableView>
                         </subviews>

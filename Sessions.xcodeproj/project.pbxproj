@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		FA200145238C8D65006B31C0 /* WebPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA200144238C8D65006B31C0 /* WebPage.swift */; };
 		FA23E1D2259A5610000E54DA /* SafariExtensionViewControllerAutoUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23E1D1259A5610000E54DA /* SafariExtensionViewControllerAutoUpdate.swift */; };
+		FA5187E325ED664F004D0F39 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5187E225ED664F004D0F39 /* TableView.swift */; };
 		FA6513AF23047CF300DA8665 /* e52-512.png in Resources */ = {isa = PBXBuildFile; fileRef = FA6513AE23047CF300DA8665 /* e52-512.png */; };
 		FAAED80F258E119E0014F264 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAED80D258E11960014F264 /* Constants.swift */; };
 		FAAED811258E14C00014F264 /* SafariExtensionViewControllerTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAED810258E14C00014F264 /* SafariExtensionViewControllerTable.swift */; };
@@ -60,6 +61,7 @@
 /* Begin PBXFileReference section */
 		FA200144238C8D65006B31C0 /* WebPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPage.swift; sourceTree = "<group>"; };
 		FA23E1D1259A5610000E54DA /* SafariExtensionViewControllerAutoUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionViewControllerAutoUpdate.swift; sourceTree = "<group>"; };
+		FA5187E225ED664F004D0F39 /* TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
 		FA6513AE23047CF300DA8665 /* e52-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "e52-512.png"; sourceTree = "<group>"; };
 		FA6513B02304C13200DA8665 /* Todo.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Todo.md; sourceTree = "<group>"; };
 		FAAED80D258E11960014F264 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				FAAED815258E18DB0014F264 /* SafariExtensionViewControllerSupport.swift */,
 				FAAED812258E16330014F264 /* SafariExtensionViewControllerSearchField.swift */,
 				FAAED810258E14C00014F264 /* SafariExtensionViewControllerTable.swift */,
+				FA5187E225ED664F004D0F39 /* TableView.swift */,
 			);
 			path = SafariExtensionViewController;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 				FAAEE342230474D70022C8BC /* SafariExtensionViewController.swift in Sources */,
 				FA23E1D2259A5610000E54DA /* SafariExtensionViewControllerAutoUpdate.swift in Sources */,
 				FAAED818258E18F20014F264 /* SafariExtensionViewControllerExport.swift in Sources */,
+				FA5187E325ED664F004D0F39 /* TableView.swift in Sources */,
 				FABDCBD62309EE88001B240C /* Session.swift in Sources */,
 				FA200145238C8D65006B31C0 /* WebPage.swift in Sources */,
 				FABDCBD1230755A2001B240C /* XML.swift in Sources */,

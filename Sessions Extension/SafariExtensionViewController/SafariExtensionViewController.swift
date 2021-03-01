@@ -21,7 +21,7 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSControlT
 	}
 	var filteredSessions = [Session]()
 	// MARK: table
-	@IBOutlet weak var tableView: NSTableView!
+	@IBOutlet weak var tableView: TableView!
 	let dragDropType = NSPasteboard.PasteboardType.string
 	
 	// MARK: searchfield
@@ -32,6 +32,10 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSControlT
 	var timer: Timer?
 	var statusImage: NSImageView?
 	var deleteTimer: Timer?
+	
+	// MARK: menus
+	@IBOutlet var singleSelectionMenu: NSMenu!
+	
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
