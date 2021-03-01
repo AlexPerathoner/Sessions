@@ -10,6 +10,7 @@
             <connections>
                 <outlet property="alwaysAutoUpdateOutlet" destination="DGi-XX-0tF" id="8Ra-bb-2kA"/>
                 <outlet property="ignoringPinnedTabsOutlet" destination="ixg-Wq-9Mi" id="Fel-pF-UPX"/>
+                <outlet property="multipleSelectionMenu" destination="2eF-mR-PQe" id="hrg-7Z-XgF"/>
                 <outlet property="searchField" destination="DvB-ZS-o0O" id="BAo-7i-hZN"/>
                 <outlet property="settingsMenu" destination="jCy-Qq-tCj" id="IwS-x7-duU"/>
                 <outlet property="singleSelectionMenu" destination="Wud-45-Yjp" id="5iA-sz-goo"/>
@@ -227,12 +228,24 @@
             </items>
             <point key="canvasLocation" x="148" y="130"/>
         </menu>
+        <menu title="settingsMenu" autoenablesItems="NO" id="2eF-mR-PQe">
+            <items>
+                <menuItem title="Merge" image="icons8-merge" id="yjx-i9-ezS">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="mergeMenuItem:" target="-2" id="qqD-HT-bOj"/>
+                    </connections>
+                </menuItem>
+            </items>
+            <point key="canvasLocation" x="120" y="499"/>
+        </menu>
     </objects>
     <resources>
         <image name="NSStatusPartiallyAvailable" width="16" height="16"/>
         <image name="icons8-delete" width="16" height="16"/>
         <image name="icons8-edit" width="16" height="16"/>
         <image name="icons8-export" width="16" height="16"/>
+        <image name="icons8-merge" width="16" height="16"/>
         <image name="icons8-restart" width="16" height="16"/>
         <image name="icons8-secure" width="16" height="16"/>
         <image name="icons8-synchronize" width="16" height="16"/>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA1EC22A25ED93A2003E3F02 /* SafariExtensionViewControllerMerge.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1EC22925ED93A1003E3F02 /* SafariExtensionViewControllerMerge.swift */; };
 		FA200145238C8D65006B31C0 /* WebPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA200144238C8D65006B31C0 /* WebPage.swift */; };
 		FA23E1D2259A5610000E54DA /* SafariExtensionViewControllerAutoUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23E1D1259A5610000E54DA /* SafariExtensionViewControllerAutoUpdate.swift */; };
 		FA5187E325ED664F004D0F39 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5187E225ED664F004D0F39 /* TableView.swift */; };
@@ -59,6 +60,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		FA1EC22925ED93A1003E3F02 /* SafariExtensionViewControllerMerge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafariExtensionViewControllerMerge.swift; sourceTree = "<group>"; };
 		FA200144238C8D65006B31C0 /* WebPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPage.swift; sourceTree = "<group>"; };
 		FA23E1D1259A5610000E54DA /* SafariExtensionViewControllerAutoUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionViewControllerAutoUpdate.swift; sourceTree = "<group>"; };
 		FA5187E225ED664F004D0F39 /* TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				FAAED815258E18DB0014F264 /* SafariExtensionViewControllerSupport.swift */,
 				FAAED812258E16330014F264 /* SafariExtensionViewControllerSearchField.swift */,
 				FAAED810258E14C00014F264 /* SafariExtensionViewControllerTable.swift */,
+				FA1EC22925ED93A1003E3F02 /* SafariExtensionViewControllerMerge.swift */,
 				FA5187E225ED664F004D0F39 /* TableView.swift */,
 			);
 			path = SafariExtensionViewController;
@@ -343,6 +346,7 @@
 				FAAED811258E14C00014F264 /* SafariExtensionViewControllerTable.swift in Sources */,
 				FAAEE340230474D70022C8BC /* SafariExtensionHandler.swift in Sources */,
 				FAE2486B23DB6E4300B82591 /* KeyPress.swift in Sources */,
+				FA1EC22A25ED93A2003E3F02 /* SafariExtensionViewControllerMerge.swift in Sources */,
 				FAD60F35258E557200AC2689 /* LoadableNib.swift in Sources */,
 				FAAED816258E18DB0014F264 /* SafariExtensionViewControllerSupport.swift in Sources */,
 				FAAED813258E16330014F264 /* SafariExtensionViewControllerSearchField.swift in Sources */,

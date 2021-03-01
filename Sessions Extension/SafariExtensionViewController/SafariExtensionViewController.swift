@@ -34,6 +34,7 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSControlT
 	var deleteTimer: Timer?
 	
 	// MARK: menus
+	@IBOutlet var multipleSelectionMenu: NSMenu!
 	@IBOutlet var singleSelectionMenu: NSMenu!
 	
 	
@@ -167,4 +168,14 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSControlT
 	}
 	
 	
+	@IBAction func mergeMenuItem(_ sender: Any) {
+		let indexes = tableView.selectedRowIndexes
+		let firstIndex = Array(tableView.selectedRowIndexes).first!
+		
+		let selectedSessions = indexes.map{sessions[$0]}
+		for _ in selectedSessions {
+			sessions.remove(at: firstIndex)
+		}
+		sessions.insert(merge(s: selectedSessions), at: firstIndex)
+	}
 }
