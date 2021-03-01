@@ -17,6 +17,7 @@ extension SafariExtensionViewController: NSTableViewDelegate, NSTableViewDataSou
 		tableView.menu?.autoenablesItems = true
 		tableView.registerForDraggedTypes([dragDropType])
 		tableView.singleMenu = singleSelectionMenu
+		tableView.vc = self
 	}
 	
 	

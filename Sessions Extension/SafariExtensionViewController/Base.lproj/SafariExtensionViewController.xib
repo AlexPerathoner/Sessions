@@ -181,6 +181,10 @@
                         <action selector="restoreAsPrivate:" target="-2" id="JvQ-ax-An2"/>
                     </connections>
                 </menuItem>
+                <menuItem title="2 tabs" image="icons8-search" tag="1" id="uUw-Wo-BEe">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="2 tabs" id="rRA-3M-oil"/>
+                </menuItem>
                 <menuItem title="Remove" image="icons8-delete" id="Tsg-EC-kx9">
                     <attributedString key="attributedTitle"/>
                     <modifierMask key="keyEquivalentModifierMask"/>
@@ -234,6 +238,7 @@
         <image name="icons8-edit" width="16" height="16"/>
         <image name="icons8-export" width="16" height="16"/>
         <image name="icons8-restart" width="16" height="16"/>
+        <image name="icons8-search" width="16" height="16"/>
         <image name="icons8-secure" width="16" height="16"/>
         <image name="icons8-synchronize" width="16" height="16"/>
     </resources>
