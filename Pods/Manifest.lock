@@ -1,0 +1,16 @@
+PODS:
+  - Sparkle (1.23.0)
+
+DEPENDENCIES:
+  - Sparkle
+
+SPEC REPOS:
+  trunk:
+    - Sparkle
+
+SPEC CHECKSUMS:
+  Sparkle: 55b1a87ba69d56913375a281546b7c82dec95bb0
+
+PODFILE CHECKSUM: 4055aea778d22702b519f323c72fb072d536301c
+
+COCOAPODS: 1.8.4
