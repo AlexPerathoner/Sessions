@@ -30,5 +30,7 @@
 	<string>Main</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
+	<key>SUFeedURL</key>
+	<string>https://alexperathoner.github.io/Sessions/Support/appcast.xml</string>
 </dict>
 </plist>

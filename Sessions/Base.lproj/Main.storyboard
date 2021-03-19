@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="17132" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15705"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17132"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -127,18 +127,6 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="Pv0-sU-HXe">
-                                <rect key="frame" x="208" y="150" width="244" height="33"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="Iav-Uu-RDH"/>
-                                    <constraint firstAttribute="height" constant="33" id="bu2-ba-4QM"/>
-                                </constraints>
-                                <textFieldCell key="cell" selectable="YES" title="Inspired by the app &quot;SessionRestore&quot; by SweetP Productions" id="YJT-D6-D9A">
-                                    <font key="font" metaFont="message" size="11"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ddr-ly-wg6">
                                 <rect key="frame" x="29" y="49" width="433" height="53"/>
                                 <constraints>
@@ -176,17 +164,34 @@ DQ
                                     </connections>
                                 </buttonCell>
                             </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bhm-TU-npy">
+                                <rect key="frame" x="206" y="131" width="239" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Label" id="hDN-a0-QFT">
+                                    <font key="font" size="11" name="HelveticaNeue"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V9o-8h-IRL">
+                                <rect key="frame" x="202" y="148" width="154" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Check for Updates" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="fWx-Yn-mBF">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="checkForUpdates:" target="XfG-lQ-9wD" id="hRp-ee-Qod"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="Pv0-sU-HXe" firstAttribute="top" secondItem="5WT-ar-e7K" secondAttribute="bottom" constant="17" id="0Rw-Yy-Yej"/>
                             <constraint firstItem="EB0-ac-UZR" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="38" id="1uy-aA-QLh"/>
                             <constraint firstItem="FWV-e2-WQh" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="29" id="4jJ-xA-eIk"/>
                             <constraint firstItem="EB0-ac-UZR" firstAttribute="leading" secondItem="FWV-e2-WQh" secondAttribute="trailing" constant="51" id="GRT-02-4Zp"/>
                             <constraint firstItem="5WT-ar-e7K" firstAttribute="leading" secondItem="FWV-e2-WQh" secondAttribute="trailing" constant="53" id="IPa-2c-fMl"/>
                             <constraint firstItem="ooh-eV-eLQ" firstAttribute="top" secondItem="ddr-ly-wg6" secondAttribute="bottom" constant="8" id="Kae-eH-Dfe"/>
                             <constraint firstItem="ooh-eV-eLQ" firstAttribute="top" secondItem="ddr-ly-wg6" secondAttribute="bottom" constant="8" id="LvN-GL-rKk"/>
-                            <constraint firstItem="Pv0-sU-HXe" firstAttribute="leading" secondItem="FWV-e2-WQh" secondAttribute="trailing" constant="53" id="a7m-y7-nVg"/>
-                            <constraint firstItem="Pv0-sU-HXe" firstAttribute="top" secondItem="5WT-ar-e7K" secondAttribute="bottom" constant="17" id="cn8-fk-V5H"/>
                             <constraint firstItem="ooh-eV-eLQ" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="105" id="dyY-1C-lAq"/>
                             <constraint firstItem="FWV-e2-WQh" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="38" id="gcB-cN-DiY"/>
                             <constraint firstAttribute="trailing" secondItem="ooh-eV-eLQ" secondAttribute="trailing" constant="105" id="gvo-zc-eBP"/>
@@ -200,9 +205,11 @@ DQ
                     </view>
                     <connections>
                         <outlet property="appNameLabel" destination="EB0-ac-UZR" id="SDO-j1-PQa"/>
+                        <outlet property="lastCheckForUpdatesOutlet" destination="bhm-TU-npy" id="U5k-Ch-2MS"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <customObject id="9PY-Pn-GNO" customClass="SUUpdater"/>
             </objects>
             <point key="canvasLocation" x="75" y="628.5"/>
         </scene>

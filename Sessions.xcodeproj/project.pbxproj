@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		91EB2CDF0A9C00EC5CF03E3F /* Pods_Sessions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 318ED5B6ED1C2BFCF396C116 /* Pods_Sessions.framework */; };
+		FA16B294260546D60044E953 /* Sessions.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = FAAEE31C230474D60022C8BC /* Sessions.entitlements */; };
 		FA200145238C8D65006B31C0 /* WebPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA200144238C8D65006B31C0 /* WebPage.swift */; };
 		FA23E1D2259A5610000E54DA /* SafariExtensionViewControllerAutoUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23E1D1259A5610000E54DA /* SafariExtensionViewControllerAutoUpdate.swift */; };
 		FA5187E325ED664F004D0F39 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5187E225ED664F004D0F39 /* TableView.swift */; };
@@ -16,7 +18,6 @@
 		FAAED813258E16330014F264 /* SafariExtensionViewControllerSearchField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAED812258E16330014F264 /* SafariExtensionViewControllerSearchField.swift */; };
 		FAAED816258E18DB0014F264 /* SafariExtensionViewControllerSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAED815258E18DB0014F264 /* SafariExtensionViewControllerSupport.swift */; };
 		FAAED818258E18F20014F264 /* SafariExtensionViewControllerExport.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAED817258E18F20014F264 /* SafariExtensionViewControllerExport.swift */; };
-		FAAEE31D230474D60022C8BC /* Sessions.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = FAAEE31C230474D60022C8BC /* Sessions.entitlements */; };
 		FAAEE31F230474D60022C8BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAEE31E230474D60022C8BC /* AppDelegate.swift */; };
 		FAAEE322230474D60022C8BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAAEE320230474D60022C8BC /* Main.storyboard */; };
 		FAAEE324230474D60022C8BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAEE323230474D60022C8BC /* ViewController.swift */; };
@@ -59,6 +60,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		318ED5B6ED1C2BFCF396C116 /* Pods_Sessions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sessions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5146B2A1181A180FC46C58FA /* Pods-Sessions.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sessions.debug.xcconfig"; path = "Target Support Files/Pods-Sessions/Pods-Sessions.debug.xcconfig"; sourceTree = "<group>"; };
+		DAD7AE143FF78EF8614ABD78 /* Pods-Sessions.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sessions.release.xcconfig"; path = "Target Support Files/Pods-Sessions/Pods-Sessions.release.xcconfig"; sourceTree = "<group>"; };
 		FA200144238C8D65006B31C0 /* WebPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPage.swift; sourceTree = "<group>"; };
 		FA23E1D1259A5610000E54DA /* SafariExtensionViewControllerAutoUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionViewControllerAutoUpdate.swift; sourceTree = "<group>"; };
 		FA5187E225ED664F004D0F39 /* TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
@@ -96,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91EB2CDF0A9C00EC5CF03E3F /* Pods_Sessions.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +115,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E15F7F334EBD62A4C9240507 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5146B2A1181A180FC46C58FA /* Pods-Sessions.debug.xcconfig */,
+				DAD7AE143FF78EF8614ABD78 /* Pods-Sessions.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		FAAED814258E17F60014F264 /* SafariExtensionViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +166,7 @@
 				FAAEE33E230474D70022C8BC /* Sessions Extension */,
 				FAAEE33B230474D70022C8BC /* Frameworks */,
 				FAAEE31A230474D60022C8BC /* Products */,
+				E15F7F334EBD62A4C9240507 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -181,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				FAAEE33C230474D70022C8BC /* Cocoa.framework */,
+				318ED5B6ED1C2BFCF396C116 /* Pods_Sessions.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -225,10 +241,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FAAEE352230474D70022C8BC /* Build configuration list for PBXNativeTarget "Sessions" */;
 			buildPhases = (
+				43AF0219FAF5C4D8A2AD36C1 /* [CP] Check Pods Manifest.lock */,
 				FAAEE315230474D60022C8BC /* Sources */,
 				FAAEE316230474D60022C8BC /* Frameworks */,
 				FAAEE317230474D60022C8BC /* Resources */,
 				FAAEE351230474D70022C8BC /* Embed App Extensions */,
+				DA0B13D7137FAE1E1D01223D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -299,7 +317,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAAEE31D230474D60022C8BC /* Sessions.entitlements in Resources */,
+				FA16B294260546D60044E953 /* Sessions.entitlements in Resources */,
 				FAAEE326230474D70022C8BC /* Assets.xcassets in Resources */,
 				FAAEE322230474D60022C8BC /* Main.storyboard in Resources */,
 			);
@@ -317,6 +335,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		43AF0219FAF5C4D8A2AD36C1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Sessions-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA0B13D7137FAE1E1D01223D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Sessions/Pods-Sessions-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Sessions/Pods-Sessions-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Sessions/Pods-Sessions-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FAAEE315230474D60022C8BC /* Sources */ = {
@@ -544,6 +604,7 @@
 		};
 		FAAEE353230474D70022C8BC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5146B2A1181A180FC46C58FA /* Pods-Sessions.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -558,7 +619,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.6.1;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = AlexP.Sessions;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -567,6 +628,7 @@
 		};
 		FAAEE354230474D70022C8BC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DAD7AE143FF78EF8614ABD78 /* Pods-Sessions.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -581,7 +643,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.6.1;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = AlexP.Sessions;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

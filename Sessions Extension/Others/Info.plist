@@ -60,5 +60,7 @@
 	<string>Copyright © 2019 Alex Perathoner. All rights reserved.</string>
 	<key>NSHumanReadableDescription</key>
 	<string>Save your sessions and re-open them whenever you want.</string>
+	<key>SUFeedURL</key>
+	<string>https://alexperathoner.github.io/Sessions/Support/appcast.xml</string>
 </dict>
 </plist>
