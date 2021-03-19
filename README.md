@@ -32,7 +32,7 @@ With *Sessions* you can easily save them, to re-open them whenever you'll want t
 
 ### New in 1.1:
 - Export as json
-- Rename sessions
+- Rename sessions 
 - Search
 
 
