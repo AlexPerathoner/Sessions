@@ -43,6 +43,7 @@ With *Sessions* you can easily save them, to re-open them whenever you'll want t
 Download the [latest release](https://github.com/AlexPerathoner/Sessions/releases/latest) and copy the file Sessions.app into your Application's folder. Open it.
 
 ![Welcome Window](https://raw.githubusercontent.com/AlexPerathoner/Sessions/master/Screens/welcomeScreen.png)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FAlexPerathoner%2FSessions.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FAlexPerathoner%2FSessions?ref=badge_shield)
 
 Safari will warn you that this extension can read sensible information from every website. That's because *Sessions* needs a high level read permission to get the URLs of the websites you have open. *Sessions* won't ever read any personal information.
 
@@ -64,3 +65,6 @@ As you enable the extension from the Safari's settings window you should see a n
 
 This project is licensed under the GPL-3.0 License - see the [LICENSE.md](LICENSE.md) file for details
 
+
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FAlexPerathoner%2FSessions.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FAlexPerathoner%2FSessions?ref=badge_large)
