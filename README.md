@@ -4,6 +4,9 @@ Safari extension to save your working sessions
 Have you ever been working on a project, with dozens of tabs open, and wondered how to save that window?
 With *Sessions* you can easily save them, to re-open them whenever you'll want to!
 
+## Note
+**As for Sep. 2021 Apple has released a Safari update. One of the new features is basically what Sessions is doing. Developing and maintaing Sessions therefore doesn't make anymore sense to me. Sessions will still remain available and could get some sporadic updates. I now recommend using this repository for learning purposes.**
+
 ## Features
 ### New in 1.6:
 - You can now reorder sessions by dragging them in the tabl
