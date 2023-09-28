@@ -24,7 +24,7 @@ class WebPage: NSObject, NSCoding, Codable, NSSecureCoding {
 	required init(coder aDecoder: NSCoder) {
 		title = aDecoder.decodeObject(forKey: "title") as? String ?? ""
 		url = aDecoder.decodeObject(forKey: "url") as? URL ?? URL(fileURLWithPath: "/")
-		privat = aDecoder.decodeObject(forKey: "privat") as? Bool ?? false
+		privat = aDecoder.decodeBool(forKey: "privat")
 	}
 	
 	func encode(with aCoder: NSCoder) {

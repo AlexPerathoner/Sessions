@@ -108,6 +108,8 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSControlT
 	
 	
 	@IBAction func restoreMenuItem(sender: Any) {
+        NSLog("Restore menu item...")
+        
 		if(UserDefaults.standard.bool(forKey: Constants.alwaysAutoUpdate)) {
 			restoreAndAutoUpdateClicked(sender)
 		} else {

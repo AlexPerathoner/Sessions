@@ -7,6 +7,7 @@
 
 
 import SafariServices
+import os.log
 
 class SafariExtensionHandler: SFSafariExtensionHandler {
     
@@ -23,6 +24,7 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
     }
 	
 	override func popoverViewController() -> SFSafariExtensionViewController {
+        os_log(.error, "showing popup")
 		return SafariExtensionViewController.shared
 	}
 	

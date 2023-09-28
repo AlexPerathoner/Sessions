@@ -13,13 +13,16 @@ extension SafariExtensionViewController {
 	// MARK: - Userdefaults
 	
 	func retrieveSession() -> [Session]? {
+        NSLog("Try to retrieve session...")
 		if let unarchivedObject = UserDefaults.standard.object(forKey: "pages") as? NSData {
 			do {
 				return try (NSKeyedUnarchiver.unarchivedObject(ofClasses: [Session.self, NSArray.self, WebPage.self, NSURL.self], from: unarchivedObject as Data) as? [Session])
 			} catch {
+                NSLog("Error!")
 			   print("Error: \(error)")
 			}
 		}
+        NSLog("Returning nil...")
 		return nil
 	}
 	
@@ -35,10 +38,15 @@ extension SafariExtensionViewController {
 	}
 	
 	func saveSessions(session: [Session]) {
+        NSLog("save sessions0")
 		let archivedObject = archiveSessions(sessions: session)
+        NSLog("save sessions1")
 		let defaults = UserDefaults.standard
+        NSLog("save sessions2")
 		defaults.set(archivedObject, forKey: "pages")
+        NSLog("save sessions3")
 		defaults.synchronize()
+        NSLog("save sessions4")
 	}
 	
 	func idUsed(id: String) -> Bool {
@@ -174,8 +182,10 @@ extension SafariExtensionViewController {
 				completion?(window)
 			}
 		} else {
+            NSLog("Opening new window...")
 			SFSafariApplication.openWindow(with: (interestingSession.pages.first!.url)) { (window) in
 				for i in 1 ..< interestingSession.pages.count {
+                    NSLog("opening tab...")
 					window?.openTab(with: interestingSession.pages[i].url, makeActiveIfPossible: false, completionHandler: { (tab) in
 					})
 				}
