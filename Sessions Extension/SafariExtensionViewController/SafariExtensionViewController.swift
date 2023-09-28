@@ -8,13 +8,14 @@
 
 import SafariServices
 import AppKit
+import os.log
 
 class SafariExtensionViewController: SFSafariExtensionViewController, NSControlTextEditingDelegate {
 	
     static let shared = SafariExtensionViewController()
 	var sessions = [Session]() {
 		didSet {
-			print("Value changed - Now \(sessions.count) sessions")
+            os_log(.debug, "Value changed - Now %d sessions", sessions.count)
 			saveSessions(session: sessions) //saves to userdefaults
 			tableView.reloadData()
 		}
@@ -43,7 +44,7 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSControlT
 		setupSearchfield()
 		preferredContentSize = NSSize(width: 243, height: 321)
 		if let r: [Session] = retrieveSession() {
-			print("Sessions retrieved")
+            os_log(.info, "Sessions retrieved")
 			sessions = r
 		}
 		ignoringPinnedTabsOutlet.state =
@@ -76,23 +77,27 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSControlT
 	// MARK: - IBActions
 	
     @IBAction func addSession(_ sender: Any) {
-		SFSafariApplication.getActiveWindow { (window) in
-			self.getTabs(window: window) { (actTabs) in
-				if actTabs.count > 0 {
-					
-					let name = actTabs.first!.title
-					let id = self.generateId()
-					
-					//adds to the top of the table (note insert at)
-					self.sessions.insert(Session(name: name, pages: actTabs, id: id), at: 0)
-					
-					//adds to the bottom of the table
-					//self.sessions.append(Session(name: name, pages: actTabs))
-					
-					print("Added session")
-				}
-			}
-		}
+        os_log(.debug, "Adding session...")
+        DispatchQueue.global().sync {
+            SFSafariApplication.getActiveWindow() { (window) in
+                os_log(.debug, "retrieved active window")
+                self.getTabs(window: window) { (actTabs) in
+                    if actTabs.count > 0 {
+                        
+                        let name = actTabs.first!.title
+                        let id = self.generateId()
+                        
+                        //adds to the top of the table (note insert at)
+                        self.sessions.insert(Session(name: name, pages: actTabs, id: id), at: 0)
+                        
+                        //adds to the bottom of the table
+                        //self.sessions.append(Session(name: name, pages: actTabs))
+                        
+                        os_log(.debug, "Added session.")
+                    }
+                }
+            }
+        }
 	}
 	
 	
@@ -103,12 +108,12 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSControlT
 		let index = tableView.row(for: sender)
 		sessions[index].name = newName
 		saveSessions(session: sessions)
-		print("Name changed to \(newName)")
+        os_log(.debug, "Name changed to %@", newName)
 	}
 	
 	
 	@IBAction func restoreMenuItem(sender: Any) {
-        NSLog("Restore menu item...")
+        os_log(.debug, "Restore menu item...")
         
 		if(UserDefaults.standard.bool(forKey: Constants.alwaysAutoUpdate)) {
 			restoreAndAutoUpdateClicked(sender)
@@ -146,10 +151,10 @@ class SafariExtensionViewController: SFSafariExtensionViewController, NSControlT
 		SFSafariApplication.getActiveWindow { (window) in
 			self.getTabs(window: window) { (actTabs) in
 				if actTabs.count > 0 {
-					NSLog("Replacing session \(clickedRow) with a session of \(actTabs.count) tabs")
+                    os_log(.debug, "Replacing session @s with a session of %d tabs", clickedRow, actTabs.count)
 					self.replacePagesInSession(index: clickedRow, pages: actTabs)
 				} else {
-					NSLog("ERROR: No tabs found while trying to replace")
+                    os_log(.error, "No tabs found while trying to replace")
 				}
 			}
 		}

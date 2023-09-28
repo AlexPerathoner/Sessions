@@ -8,21 +8,21 @@
 
 import Cocoa
 import SafariServices
+import os.log
 
 extension SafariExtensionViewController {
 	// MARK: - Userdefaults
 	
 	func retrieveSession() -> [Session]? {
-        NSLog("Try to retrieve session...")
+        os_log(.info, "Try to retrieve session...")
 		if let unarchivedObject = UserDefaults.standard.object(forKey: "pages") as? NSData {
 			do {
-				return try (NSKeyedUnarchiver.unarchivedObject(ofClasses: [Session.self, NSArray.self, WebPage.self, NSURL.self], from: unarchivedObject as Data) as? [Session])
+                return try (NSKeyedUnarchiver.unarchivedObject(ofClasses: [Session.self, NSArray.self, WebPage.self, NSURL.self, NSString.self], from: unarchivedObject as Data) as? [Session])
 			} catch {
-                NSLog("Error!")
-			   print("Error: \(error)")
+                os_log(.error, "Error while unarchiving sessions")
 			}
 		}
-        NSLog("Returning nil...")
+        os_log(.info, "No session found. Returning nil...")
 		return nil
 	}
 	
@@ -32,7 +32,7 @@ extension SafariExtensionViewController {
 			let archivedObject = try NSKeyedArchiver.archivedData(withRootObject: sessions, requiringSecureCoding: false)
 			return archivedObject as NSData
 		} catch let error {
-			print("Unspecified Error: \(error)")
+            os_log(.error, "Unspecified Error: %@", error.localizedDescription)
 		}
 		return nil
 	}
